@@ -107,7 +107,7 @@
   .slide {
     position: absolute;
     inset: 0;
-    padding: 36px 48px;
+    padding: 34px 44px;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -134,7 +134,7 @@
     padding: 4px 12px;
     border: 2px solid var(--black);
     box-shadow: 2px 2px 0px var(--black);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .editorial-tag.purple {
@@ -152,20 +152,25 @@
     color: var(--black);
   }
 
+  .editorial-tag.coral {
+    background: var(--coral);
+    color: #FFF;
+  }
+
   .slide-title {
-    font-size: 38px;
+    font-size: 34px;
     font-weight: 900;
     line-height: 1.1;
-    letter-spacing: -1.5px;
+    letter-spacing: -1.2px;
     color: var(--black);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .slide-subtitle {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 15px;
+    font-size: 14px;
     color: #444;
-    max-width: 850px;
+    max-width: 900px;
     line-height: 1.4;
   }
 
@@ -173,7 +178,7 @@
     background: var(--bg-card);
     border: var(--border-thick);
     box-shadow: var(--shadow-md);
-    padding: 20px;
+    padding: 18px;
     position: relative;
   }
 
@@ -189,6 +194,11 @@
     background: var(--mint);
   }
 
+  .neo-card.coral-tint {
+    background: #FFF0F1;
+    border-color: var(--coral);
+  }
+
   .neo-card.black {
     background: var(--black);
     color: #FFF;
@@ -198,7 +208,7 @@
   .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 20px;
     height: 100%;
     align-items: stretch;
   }
@@ -206,7 +216,7 @@
   .grid-split {
     display: grid;
     grid-template-columns: 380px 1fr;
-    gap: 28px;
+    gap: 24px;
     height: 100%;
     align-items: stretch;
   }
@@ -215,7 +225,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
-    gap: 20px;
+    gap: 18px;
   }
 
   /* Horizontal Stream Flow Diagram */
@@ -223,8 +233,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 14px;
-    margin: 20px 0;
+    gap: 12px;
+    margin: 16px 0;
   }
 
   .stream-node {
@@ -232,7 +242,7 @@
     background: #FFF;
     border: var(--border-thick);
     box-shadow: var(--shadow-sm);
-    padding: 16px 14px;
+    padding: 14px 12px;
     text-align: center;
     position: relative;
   }
@@ -240,13 +250,13 @@
   .stream-node .step-num {
     position: absolute;
     top: -12px;
-    left: 12px;
+    left: 10px;
     background: var(--black);
     color: var(--yellow);
     font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 800;
-    padding: 2px 8px;
+    padding: 2px 7px;
     border: 2px solid var(--black);
   }
 
@@ -254,7 +264,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 900;
     color: var(--black);
   }
@@ -266,16 +276,16 @@
     color: var(--yellow);
     font-family: 'JetBrains Mono', monospace;
     font-weight: 800;
-    font-size: 32px;
-    padding: 8px 16px;
+    font-size: 30px;
+    padding: 6px 14px;
     border: 3px solid var(--black);
     box-shadow: 4px 4px 0px var(--purple);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   /* Bottom Controls Toolbar */
   .deck-footer {
-    height: 52px;
+    height: 50px;
     background: var(--black);
     display: flex;
     align-items: center;
@@ -293,8 +303,8 @@
     border: 2px solid #000;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 900;
-    font-size: 14px;
-    padding: 6px 18px;
+    font-size: 13px;
+    padding: 6px 16px;
     cursor: pointer;
     box-shadow: 3px 3px 0px #FFF;
     transition: transform 0.1s, box-shadow 0.1s;
@@ -314,10 +324,10 @@
     background: var(--purple);
     color: #FFF;
     border: 2px solid #FFF;
-    padding: 6px 16px;
+    padding: 6px 14px;
     text-decoration: none;
     font-weight: 800;
-    font-size: 13px;
+    font-size: 12px;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -331,10 +341,10 @@
   /* Code & Mono Pill */
   .mono-code {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
+    font-size: 12px;
     background: var(--black);
     color: var(--mint);
-    padding: 10px 14px;
+    padding: 8px 12px;
     border: 2px solid var(--black);
     box-shadow: 3px 3px 0px var(--yellow);
     line-height: 1.5;
@@ -349,7 +359,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 14px;
     position: relative;
   }
 
@@ -362,17 +372,17 @@
   .cover-grid {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
+    gap: 36px;
     height: 100%;
     align-items: center;
   }
 
   .hero-title {
-    font-size: 54px;
+    font-size: 50px;
     font-weight: 900;
-    line-height: 1.0;
+    line-height: 1.02;
     letter-spacing: -2px;
-    margin: 16px 0;
+    margin: 14px 0;
   }
 
   .hero-title span {
@@ -386,16 +396,16 @@
   .tag-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 18px;
+    gap: 8px;
+    margin-top: 16px;
   }
 
   .tag-item {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     background: #FFF;
-    padding: 4px 10px;
+    padding: 4px 9px;
     border: 2px solid #000;
     box-shadow: 2px 2px 0px #000;
   }
@@ -414,12 +424,12 @@
   .dashboard-topbar {
     background: #000;
     color: #FFF;
-    padding: 10px 18px;
+    padding: 9px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
   }
 
@@ -430,30 +440,32 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 24px;
+    padding: 20px;
     text-align: center;
     border-top: 3px solid #000;
     border-bottom: 3px solid #000;
+    position: relative;
+    cursor: pointer;
   }
 
   .placeholder-target {
     background: #FFF;
     border: 3px dashed #000;
-    padding: 24px 36px;
+    padding: 22px 32px;
     box-shadow: var(--shadow-md);
   }
 
   .dashboard-stats-strip {
     background: #FFF;
-    padding: 12px 18px;
+    padding: 10px 16px;
     display: flex;
-    gap: 20px;
+    gap: 16px;
   }
 
   .dash-stat-col {
     flex: 1;
     border: 2px solid #000;
-    padding: 8px 12px;
+    padding: 7px 10px;
     background: var(--yellow);
     box-shadow: 2px 2px 0px #000;
   }
@@ -552,7 +564,7 @@
     inset: 0;
     background: rgba(0, 0, 0, 0.85);
     z-index: 1000;
-    padding: 40px;
+    padding: 30px;
     overflow-y: auto;
   }
 
@@ -567,16 +579,16 @@
 
   .drawer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 16px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 14px;
+    margin-top: 18px;
   }
 
   .drawer-card {
     background: #FFF;
     border: 3px solid #000;
     box-shadow: 4px 4px 0px #000;
-    padding: 12px;
+    padding: 10px;
     cursor: pointer;
     transition: transform 0.15s, background 0.15s;
   }
@@ -596,7 +608,6 @@
     border-color: #00F5A0 !important;
     background: rgba(0, 245, 160, 0.15) !important;
   }
-
 </style>
 </head>
 <body>
@@ -605,18 +616,15 @@
 
   <!-- Deck Top Ribbon -->
   <header class="deck-header">
-    <div style="display:flex; align-items:center; gap:14px;">
+    <div style="display:flex; align-items:center; gap:12px;">
       <span class="brand-badge">SAMSUNG SIC 2026</span>
       <span>SIC8: Real-Time Payment Ingestion & Anti-Fraud Lakehouse</span>
       <span class="project-ref">| Monorepo Release 1.0</span>
     </div>
-    <div style="display:flex; align-items:center; gap:12px;">
-      <span style="color:#FFE600;">LIVE CANVA SYNCED</span>
-      
+    <div style="display:flex; align-items:center; gap:10px;">
       <button class="tool-btn yellow" id="editToggleBtn" onclick="toggleEditMode()" style="font-size:11px; padding:3px 10px;">✏️ EDIT TEMPLATE</button>
-      <button class="tool-btn purple" onclick="openSlideDrawer()" style="font-size:11px; padding:3px 10px;">📑 SLIDES (17)</button>
-
-      <span class="counter" id="slideCounter">SLIDE 01 / 17</span>
+      <button class="tool-btn purple" onclick="openSlideDrawer()" style="font-size:11px; padding:3px 10px;">📑 SLIDES (18)</button>
+      <span class="counter" id="slideCounter">SLIDE 01 / 18</span>
     </div>
   </header>
 
@@ -624,7 +632,7 @@
   <div class="edit-ribbon" id="editRibbon">
     <div style="display:flex; align-items:center; gap:12px;">
       <span style="background:#000; color:#FFE600; padding:2px 8px; border:2px solid #000;">✏️ TEMPLATE EDIT MODE ACTIVE</span>
-      <span>Click any text, header, or badge to edit directly.</span>
+      <span>Click any text, header, or badge to edit directly. Drag & drop images into dashboard frames.</span>
     </div>
     <div style="display:flex; align-items:center; gap:10px;">
       <button class="tool-btn mint" onclick="saveToNewHtmlFile()">💾 DOWNLOAD EDITED HTML</button>
@@ -634,7 +642,6 @@
     </div>
   </div>
 
-
   <!-- Slide Viewport -->
   <main class="slide-viewport" id="slideViewport">
 
@@ -642,14 +649,14 @@
     <section class="slide active" id="slide-1">
       <div class="cover-grid">
         <div>
-          <div class="editorial-tag yellow">FINTECH STREAMING & LAKEHOUSE PLATFORM</div>
+          <div class="editorial-tag yellow">FINTECH STREAMING &amp; LAKEHOUSE PLATFORM</div>
           <h1 class="hero-title">
             ZERO-DB-INSERTS<br>
             <span>SUB-10MS FRAUD</span><br>
             LAKEHOUSE
           </h1>
-          <p class="slide-subtitle" style="font-size:16px; margin-top:12px;">
-            High-throughput event streaming, automated PostgreSQL Debezium CDC, sub-10ms online LightGBM inference, and Medallion Lakehouse on AWS S3 & Databricks.
+          <p class="slide-subtitle" style="font-size:15px; margin-top:10px;">
+            High-throughput event streaming, automated PostgreSQL Debezium CDC, sub-10ms online LightGBM inference, and Medallion Lakehouse on AWS S3 &amp; Databricks.
           </p>
           <div class="tag-group">
             <span class="tag-item">⚡ 10–100+ TPS Stream</span>
@@ -661,34 +668,28 @@
         </div>
 
         <!-- Cover Geometric Illustration -->
-        <div class="neo-card purple-tint" style="height:360px; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+        <div class="neo-card purple-tint" style="height:350px; display:flex; flex-direction:column; justify-content:center; align-items:center;">
           <svg viewBox="0 0 320 300" style="width:100%; height:100%;">
-            <!-- Streaming pipeline graphic -->
             <rect x="20" y="30" width="120" height="70" fill="#FFE600" stroke="#000" stroke-width="4"/>
             <text x="80" y="65" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="900">SYNTHETIC</text>
             <text x="80" y="82" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">GENERATOR</text>
             <circle cx="130" cy="45" r="5" fill="#000"/>
 
-            <!-- Arrow 1 -->
             <path d="M 144 65 L 180 65" stroke="#000" stroke-width="4"/>
             <polygon points="176,59 190,65 176,71" fill="#000"/>
 
-            <!-- Kafka Broker -->
             <rect x="190" y="20" width="110" height="90" fill="#7C3AED" stroke="#000" stroke-width="4"/>
             <text x="245" y="55" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="900">AMAZON MSK</text>
             <text x="245" y="75" text-anchor="middle" fill="#FFE600" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">4-PARTITIONS</text>
 
-            <!-- Down stream paths -->
             <path d="M 245 114 L 245 145" stroke="#000" stroke-width="4"/>
             <polygon points="239,141 245,155 251,141" fill="#000"/>
 
-            <!-- Inference Node -->
             <rect x="180" y="155" width="130" height="85" fill="#00F5A0" stroke="#000" stroke-width="4"/>
             <text x="245" y="185" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="900">ONLINE ML</text>
             <text x="245" y="202" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">&lt; 10ms SCORING</text>
             <text x="245" y="222" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">Redis + LightGBM</text>
 
-            <!-- S3 Lakehouse Bucket -->
             <rect x="20" y="155" width="120" height="85" fill="#FFF" stroke="#000" stroke-width="4"/>
             <text x="80" y="185" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="900">S3 BRONZE</text>
             <text x="80" y="202" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">LAKEHOUSE</text>
@@ -697,142 +698,185 @@
             <path d="M 186 90 L 90 151" stroke="#000" stroke-width="4" stroke-dasharray="6,4"/>
             <polygon points="90,140 82,155 98,151" fill="#000"/>
 
-            <!-- Hard offset shadow accent -->
             <circle cx="280" cy="270" r="14" fill="#FFE600" stroke="#000" stroke-width="3"/>
             <text x="280" y="275" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="900">SIC8</text>
           </svg>
         </div>
       </div>
-      <div style="display:flex; justify-content:space-between; align-items:center; border-top:2px solid #000; padding-top:12px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-top:2px solid #000; padding-top:10px;">
         <span style="font-family:'JetBrains Mono'; font-size:12px; font-weight:700;">PRODUCERS: FASTAPI &bull; MSK CLUSTER &bull; POSTGRES CDC &bull; DATABRICKS MEDALLION</span>
         <span style="font-family:'JetBrains Mono'; font-size:12px; font-weight:800; background:#FFE600; padding:2px 8px; border:2px solid #000;">STABLE V1.0</span>
       </div>
     </section>
 
-    <!-- SLIDE 2: Project Overview & Connected System -->
+    <!-- SLIDE 2: Problem Statement (NEW) -->
     <section class="slide" id="slide-2">
       <div>
-        <div class="editorial-tag purple">ECOSYSTEM BLUEPRINT</div>
-        <h2 class="slide-title">The Connected Anti-Fraud Platform</h2>
-        <p class="slide-subtitle">Four tightly coupled pipelines operating in unison across ingestion, relational change capture, batch reference extracts, and instant inference.</p>
+        <div class="editorial-tag coral">BUSINESS &amp; TECHNICAL CHALLENGE</div>
+        <h2 class="slide-title">Problem Statement: The FinTech Ingestion Dilemma</h2>
+        <p class="slide-subtitle">Financial institutions manage disparate data sources with conflicting throughput, latency, and schema requirements.</p>
       </div>
 
-      <!-- Connected Architecture Grid -->
-      <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:16px; margin:20px 0; height:340px;">
-        
-        <div class="neo-card yellow" style="display:flex; flex-direction:column; justify-content:space-between;">
+      <div class="grid-split" style="margin:16px 0; height:340px;">
+        <!-- Left Column: Core Friction Points -->
+        <div class="neo-card coral-tint" style="display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#000; color:#FFF; padding:3px 6px; display:inline-block; margin-bottom:8px;">PATH 01</div>
-            <h3 style="font-size:18px; font-weight:900;">Real-Time Streaming</h3>
-            <p style="font-size:13px; line-height:1.4; margin-top:8px;">Continuous synthetic transactions (10–100+ TPS) direct into Amazon MSK without database insertion bottlenecks.</p>
+            <h3 style="font-size:17px; font-weight:900; color:#FF4757; margin-bottom:10px;">Three Operational Bottlenecks</h3>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div style="background:#FFF; border:2px solid #000; padding:8px; box-shadow:2px 2px 0 #000;">
+                <strong style="font-size:12px;">1. Tri-Modal Ingestion Conflict</strong>
+                <p style="font-size:11px; color:#444; line-height:1.4;">Real-time payments (100+ TPS) cannot wait for batch windows, while dimensional data (users, cards) resides in relational ACID databases.</p>
+              </div>
+              <div style="background:#FFF; border:2px solid #000; padding:8px; box-shadow:2px 2px 0 #000;">
+                <strong style="font-size:12px;">2. Relational Write Exhaustion</strong>
+                <p style="font-size:11px; color:#444; line-height:1.4;">Traditional architectures insert streaming transactions directly into RDBMS tables, causing connection pool deadlocks and query latency spikes.</p>
+              </div>
+              <div style="background:#FFF; border:2px solid #000; padding:8px; box-shadow:2px 2px 0 #000;">
+                <strong style="font-size:12px;">3. Downstream Analytical Desync</strong>
+                <p style="font-size:11px; color:#444; line-height:1.4;">Delayed or uncoordinated ingestion results in fraud models scoring transactions against stale customer profiles.</p>
+              </div>
+            </div>
           </div>
-          <div class="mono-code" style="font-size:11px; padding:6px 8px;">
-            FastAPI &rarr; MSK &rarr; S3 Bronze
+          <div class="mono-code" style="font-size:11px; background:#FF4757; color:#FFF;">
+            RISK: Fraudulent transactions slip through before model scores
           </div>
         </div>
 
-        <div class="neo-card purple-tint" style="display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#7C3AED; color:#FFF; padding:3px 6px; display:inline-block; margin-bottom:8px;">PATH 02</div>
-            <h3 style="font-size:18px; font-weight:900;">Debezium CDC</h3>
-            <p style="font-size:13px; line-height:1.4; margin-top:8px;">PostgreSQL 18 WAL logical decoding streaming card and user demographic mutations downstream with zero polling.</p>
-          </div>
-          <div class="mono-code" style="font-size:11px; padding:6px 8px; background:#7C3AED; color:#FFF;">
-            PG WAL &rarr; Debezium &rarr; S3
-          </div>
-        </div>
+        <!-- Right Column: Visual Diagram of Disconnected Pipelines -->
+        <div class="diagram-box">
+          <h4 style="font-size:13px; font-weight:900; margin-bottom:8px;">Fragmented Legacy Ingestion Architecture</h4>
+          <svg viewBox="0 0 520 230" style="width:100%; height:100%;">
+            <!-- Source 1 -->
+            <rect x="20" y="20" width="120" height="45" fill="#FFE600" stroke="#000" stroke-width="2"/>
+            <text x="80" y="42" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="800">POS / ATM Stream</text>
+            <text x="80" y="56" text-anchor="middle" font-family="'JetBrains Mono'" font-size="8" fill="#555">High Velocity</text>
 
-        <div class="neo-card mint" style="display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#000; color:#00F5A0; padding:3px 6px; display:inline-block; margin-bottom:8px;">PATH 03</div>
-            <h3 style="font-size:18px; font-weight:900;">Batch Reference</h3>
-            <p style="font-size:13px; line-height:1.4; margin-top:8px;">Scheduled Airflow DAG 02 reading reference dimensions (merchants, ZIPs, branches) into snappy-compressed Parquet.</p>
-          </div>
-          <div class="mono-code" style="font-size:11px; padding:6px 8px;">
-            Airflow &rarr; Parquet &rarr; Bronze
-          </div>
-        </div>
+            <!-- Source 2 -->
+            <rect x="20" y="85" width="120" height="45" fill="#EDE9FE" stroke="#000" stroke-width="2"/>
+            <text x="80" y="107" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="800">PostgreSQL DB</text>
+            <text x="80" y="121" text-anchor="middle" font-family="'JetBrains Mono'" font-size="8" fill="#555">ACID Mutations</text>
 
-        <div class="neo-card black" style="display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#FFE600; color:#000; padding:3px 6px; display:inline-block; margin-bottom:8px;">PATH 04</div>
-            <h3 style="font-size:18px; font-weight:900; color:#FFF;">Sub-10ms Fraud ML</h3>
-            <p style="font-size:13px; line-height:1.4; margin-top:8px; color:#CCC;">In-flight feature hydration via Redis and scoring using LightGBM v2 with Kafka fraud alerts & DLQ safety.</p>
-          </div>
-          <div class="mono-code" style="font-size:11px; padding:6px 8px; background:#1A1A1A; color:#FFE600;">
-            Redis + ML &rarr; &lt;10ms Scoring
-          </div>
-        </div>
+            <!-- Source 3 -->
+            <rect x="20" y="150" width="120" height="45" fill="#FFF" stroke="#000" stroke-width="2"/>
+            <text x="80" y="172" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="800">Reference Dumps</text>
+            <text x="80" y="186" text-anchor="middle" font-family="'JetBrains Mono'" font-size="8" fill="#555">Daily Flat Files</text>
 
+            <!-- Bottleneck Box -->
+            <rect x="190" y="50" width="140" height="120" fill="#FF4757" stroke="#000" stroke-width="3"/>
+            <text x="260" y="85" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono'" font-size="12" font-weight="900">MONOLITHIC DB</text>
+            <text x="260" y="105" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono'" font-size="9" font-weight="700">LOCK CONTENTION</text>
+            <text x="260" y="125" text-anchor="middle" fill="#FFE600" font-family="'JetBrains Mono'" font-size="8" font-weight="800">Thread Exhaustion</text>
+            <text x="260" y="145" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono'" font-size="8">Latency &gt; 250ms</text>
+
+            <!-- Jagged Broken Lines -->
+            <path d="M 140 42 L 185 80" stroke="#FF4757" stroke-width="3" stroke-dasharray="4,3"/>
+            <path d="M 140 107 L 185 107" stroke="#FF4757" stroke-width="3"/>
+            <path d="M 140 172 L 185 130" stroke="#FF4757" stroke-width="3" stroke-dasharray="4,3"/>
+
+            <!-- Downstream Blocked Consumers -->
+            <rect x="380" y="30" width="120" height="45" fill="#F3F0E6" stroke="#000" stroke-width="2"/>
+            <text x="440" y="52" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800">Fraud Engine</text>
+            <text x="440" y="66" text-anchor="middle" font-family="'JetBrains Mono'" font-size="8" fill="#FF4757">TIMEOUT (Lag)</text>
+
+            <rect x="380" y="90" width="120" height="45" fill="#F3F0E6" stroke="#000" stroke-width="2"/>
+            <text x="440" y="112" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800">Lakehouse</text>
+            <text x="440" y="126" text-anchor="middle" font-family="'JetBrains Mono'" font-size="8" fill="#FF4757">Schema Inconsistency</text>
+
+            <rect x="380" y="150" width="120" height="45" fill="#F3F0E6" stroke="#000" stroke-width="2"/>
+            <text x="440" y="172" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800">BI Dashboards</text>
+            <text x="440" y="186" text-anchor="middle" font-family="'JetBrains Mono'" font-size="8" fill="#FF4757">Stale Visualizations</text>
+
+            <path d="M 330 90 L 375 52" stroke="#000" stroke-width="2" stroke-dasharray="3,3"/>
+            <path d="M 330 110 L 375 112" stroke="#000" stroke-width="2" stroke-dasharray="3,3"/>
+            <path d="M 330 130 L 375 172" stroke="#000" stroke-width="2" stroke-dasharray="3,3"/>
+          </svg>
+        </div>
       </div>
 
-      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:8px 14px; box-shadow:3px 3px 0px #000;">
-        <strong>CORE PRINCIPLE:</strong> Asynchronous streaming eliminates transactional lock contention; Lakehouse Medallion guarantees unified analytical queries.
+      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:7px 12px;">
+        <strong>VERIFIED PROJECT INVARIANT:</strong> Relational databases are built for transactional ACID state, not for high-velocity payment streaming pipelines.
       </div>
     </section>
 
-    <!-- SLIDE 3: FinTech Challenge & Core Invariants -->
+    <!-- SLIDE 3: Our Solution: Problem -> Solution -> Benefit Mapping (NEW) -->
     <section class="slide" id="slide-3">
       <div>
-        <div class="editorial-tag coral" style="background:#FF4757; color:#FFF;">ARCHITECTURAL INVARIANTS</div>
-        <h2 class="slide-title">The FinTech Challenge: Throughput vs Contention</h2>
-        <p class="slide-subtitle">Why traditional relational transaction logging fails under high transaction velocities and how our invariants resolve it.</p>
+        <div class="editorial-tag mint">UNIFIED SOLUTION BLUEPRINT</div>
+        <h2 class="slide-title">Our Solution: Multi-Path Ingestion &amp; Lakehouse</h2>
+        <p class="slide-subtitle">Decoupling streaming ingestion from relational persistence to guarantee linear scale, zero lock contention, and sub-10ms scoring.</p>
       </div>
 
-      <div class="grid-2" style="margin:20px 0; height:340px;">
-        <!-- Left: Relational Failure Mode -->
-        <div class="neo-card" style="border:3px solid #FF4757; background:#FFF5F5;">
-          <div style="display:flex; justify-content:space-between; align-items:center;">
-            <span style="font-family:'JetBrains Mono'; font-weight:800; color:#FF4757;">TRADITIONAL RDBMS PERSISTENCE</span>
-            <span style="background:#FF4757; color:#FFF; font-size:10px; font-weight:900; padding:2px 6px;">BOTTLENECK</span>
+      <div class="grid-2" style="margin:16px 0; height:340px;">
+        <!-- Left: Problem -> Solution -> Benefit Table -->
+        <div class="neo-card yellow" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <h3 style="font-size:17px; font-weight:900;">Architecture Value Mapping</h3>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="background:#FFF; border:2px solid #000; padding:7px 10px; box-shadow:2px 2px 0 #000;">
+              <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800; color:#FF4757;">PROBLEM 1: RDBMS WRITE BOTTLENECK</div>
+              <div style="font-size:11px; font-weight:700;">Solution: Zero-DB Streaming directly into Amazon MSK</div>
+              <div style="font-size:10px; color:#008F4C; font-family:'JetBrains Mono';">Benefit: 10–100+ TPS with 0 connection lockouts</div>
+            </div>
+            <div style="background:#FFF; border:2px solid #000; padding:7px 10px; box-shadow:2px 2px 0 #000;">
+              <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800; color:#FF4757;">PROBLEM 2: RELATIONAL MUTATION LAG</div>
+              <div style="font-size:11px; font-weight:700;">Solution: Debezium 2.5 CDC on PostgreSQL WAL</div>
+              <div style="font-size:10px; color:#008F4C; font-family:'JetBrains Mono';">Benefit: Sub-second profile replication without dual-writes</div>
+            </div>
+            <div style="background:#FFF; border:2px solid #000; padding:7px 10px; box-shadow:2px 2px 0 #000;">
+              <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800; color:#FF4757;">PROBLEM 3: INEFFICIENT FLAT FILE JOINS</div>
+              <div style="font-size:11px; font-weight:700;">Solution: Airflow Snappy Parquet Reference Extracts</div>
+              <div style="font-size:10px; color:#008F4C; font-family:'JetBrains Mono';">Benefit: 90% size reduction, zero OLTP join cost</div>
+            </div>
+            <div style="background:#FFF; border:2px solid #000; padding:7px 10px; box-shadow:2px 2px 0 #000;">
+              <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800; color:#FF4757;">PROBLEM 4: SLOW FRAUD INFERENCE</div>
+              <div style="font-size:11px; font-weight:700;">Solution: LightGBM v2 + In-Memory / Redis Feature Hydration</div>
+              <div style="font-size:10px; color:#008F4C; font-family:'JetBrains Mono';">Benefit: 4.2ms avg scoring before transaction settlement</div>
+            </div>
           </div>
-          <h3 style="font-size:20px; font-weight:900; margin:12px 0;">Relational Insertion Deadlocks</h3>
-          <ul style="font-size:13px; line-height:1.6; margin-left:18px; color:#333;">
-            <li>Direct INSERT statements per transaction exhaust database connection pools.</li>
-            <li>Row-level locking and B-Tree index rebalancing throttle throughput to &lt; 200 TPS.</li>
-            <li>Dual-write anomalies between operational databases and analytics warehouses.</li>
-            <li>Inference queries compete with transactional write threads for CPU & I/O.</li>
-          </ul>
-          <div class="mono-code" style="margin-top:16px; background:#FF4757; color:#FFF;">
-            FAILURE: Connection pool saturation & lock timeouts
-          </div>
+          <div class="mono-code" style="font-size:10px;">Grounded 100% in repository implementation code</div>
         </div>
 
-        <!-- Right: Our Lakehouse Solution -->
-        <div class="neo-card yellow">
-          <div style="display:flex; justify-content:space-between; align-items:center;">
-            <span style="font-family:'JetBrains Mono'; font-weight:800; color:#000;">SIC8 LAKEHOUSE INVARIANT</span>
-            <span style="background:#000; color:#FFE600; font-size:10px; font-weight:900; padding:2px 6px;">PRODUCTION RULE</span>
+        <!-- Right: Layered Solution Stack -->
+        <div class="neo-card purple-tint" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <h3 style="font-size:17px; font-weight:900;">The Four-Tier Architecture</h3>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="background:#FFE600; border:2px solid #000; padding:8px 12px; box-shadow:2px 2px 0 #000;">
+              <strong style="font-size:12px; font-family:'JetBrains Mono';">1. INGESTION TIER</strong>
+              <div style="font-size:11px; color:#222;">FastAPI RateController, Debezium 2.5 CDC, Airflow DAG 02</div>
+            </div>
+            <div style="background:#FFF; border:2px solid #000; padding:8px 12px; box-shadow:2px 2px 0 #000;">
+              <strong style="font-size:12px; font-family:'JetBrains Mono';">2. STREAMING &amp; MESSAGING</strong>
+              <div style="font-size:11px; color:#222;">Amazon MSK 4-partition topics, Kafka Connect S3 Sink</div>
+            </div>
+            <div style="background:#00F5A0; border:2px solid #000; padding:8px 12px; box-shadow:2px 2px 0 #000;">
+              <strong style="font-size:12px; font-family:'JetBrains Mono';">3. LAKEHOUSE STORAGE &amp; PROCESSING</strong>
+              <div style="font-size:11px; color:#222;">S3 Bronze (json.gz/parquet) &rarr; Databricks Silver &amp; Gold Delta</div>
+            </div>
+            <div style="background:#7C3AED; color:#FFF; border:2px solid #000; padding:8px 12px; box-shadow:2px 2px 0 #000;">
+              <strong style="font-size:12px; font-family:'JetBrains Mono'; color:#FFE600;">4. SERVING &amp; OBSERVABILITY</strong>
+              <div style="font-size:11px; color:#DDD;">LightGBM Fraud Consumer, Redis feature store, Databricks SQL</div>
+            </div>
           </div>
-          <h3 style="font-size:20px; font-weight:900; margin:12px 0;">Zero-DB-Inserts Streaming</h3>
-          <ul style="font-size:13px; line-height:1.6; margin-left:18px; color:#111;">
-            <li>Zero relational database writes during live transaction flow: direct to Amazon MSK.</li>
-            <li>PostgreSQL used strictly for demographic state, replicated asynchronously via WAL CDC.</li>
-            <li>Low-latency feature hydration from in-memory Redis cluster (&lt; 2ms retrieval).</li>
-            <li>Partitioned S3 micro-batches (json.gz) decoupled from downstream Delta Lake ingestion.</li>
-          </ul>
-          <div class="mono-code" style="margin-top:16px;">
-            INVARIANT: Total separation of live streams from OLTP storage
+          <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#000; color:#FFF; padding:6px 10px;">
+            Decoupled pipelines prevent cascading failures across tiers
           </div>
         </div>
       </div>
 
-      <div style="display:flex; gap:16px;">
-        <span class="stat-badge" style="font-size:16px; padding:4px 10px;">99.99% INGESTION UPTIME</span>
-        <span class="stat-badge" style="font-size:16px; padding:4px 10px; background:var(--purple); color:#FFF; box-shadow:4px 4px 0px #000;">ZERO DB LOCKS</span>
+      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:7px 12px;">
+        <strong>RESULT:</strong> End-to-end ingestion and scoring operates autonomously under 500ms without touching user-facing tables.
       </div>
     </section>
 
-    <!-- SLIDE 4: End-to-End System Architecture -->
+    <!-- SLIDE 4: High-Level System Architecture & Four Data Paths -->
     <section class="slide" id="slide-4">
       <div>
         <div class="editorial-tag mint">SYSTEM ARCHITECTURE</div>
-        <h2 class="slide-title">End-to-End Architecture Flow</h2>
-        <p class="slide-subtitle">High-level layout showing the streaming backbone, change-data-capture, medallion storage, and inference engine.</p>
+        <h2 class="slide-title">High-Level Architecture &amp; Four Data Paths</h2>
+        <p class="slide-subtitle">A unified topology connecting synthetic payment events, relational CDC, daily batch extracts, and instant inference.</p>
       </div>
 
       <!-- Central Architecture Diagram -->
-      <div class="diagram-box" style="margin:16px 0; height:370px;">
+      <div class="diagram-box" style="margin:14px 0; height:360px;">
         <svg viewBox="0 0 960 330" class="diagram-svg">
           <!-- Sources Column -->
           <rect x="20" y="30" width="160" height="70" fill="#FFE600" stroke="#000" stroke-width="3"/>
@@ -856,7 +900,7 @@
 
           <!-- Ingestion & Streaming Layer -->
           <rect x="250" y="20" width="180" height="280" fill="#FFF" stroke="#000" stroke-width="4"/>
-          <text x="340" y="45" text-anchor="middle" font-family="'JetBrains Mono'" font-size="12" font-weight="900">STREAMING & CDC</text>
+          <text x="340" y="45" text-anchor="middle" font-family="'JetBrains Mono'" font-size="12" font-weight="900">STREAMING &amp; CDC</text>
 
           <rect x="265" y="60" width="150" height="50" fill="#7C3AED" stroke="#000" stroke-width="3"/>
           <text x="340" y="85" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono'" font-size="11" font-weight="800">AMAZON MSK</text>
@@ -869,7 +913,7 @@
           <rect x="265" y="200" width="150" height="80" fill="#00F5A0" stroke="#000" stroke-width="3"/>
           <text x="340" y="225" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900">SUB-10MS INFERENCE</text>
           <text x="340" y="245" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="700">LightGBM + Redis</text>
-          <text x="340" y="265" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800">Alerts & DLQ Topics</text>
+          <text x="340" y="265" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800">Alerts &amp; DLQ Topics</text>
 
           <!-- Arrow to Lakehouse -->
           <path d="M 430 85 L 500 85" stroke="#000" stroke-width="3"/>
@@ -881,15 +925,15 @@
 
           <rect x="525" y="60" width="190" height="55" fill="#FFE600" stroke="#000" stroke-width="3"/>
           <text x="620" y="85" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="800">S3 BRONZE LAYER</text>
-          <text x="620" y="102" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="700">json.gz micro-batches & parquet</text>
+          <text x="620" y="102" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="700">json.gz micro-batches &amp; parquet</text>
 
           <rect x="525" y="130" width="190" height="55" fill="#FFF" stroke="#000" stroke-width="3"/>
           <text x="620" y="155" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="800">DATABRICKS SILVER</text>
-          <text x="620" y="172" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="700">Delta Lake deduplicated & clean</text>
+          <text x="620" y="172" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="700">Delta Lake deduplicated &amp; clean</text>
 
           <rect x="525" y="200" width="190" height="55" fill="#7C3AED" stroke="#000" stroke-width="3"/>
           <text x="620" y="225" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono'" font-size="11" font-weight="800">DATABRICKS GOLD</text>
-          <text x="620" y="242" text-anchor="middle" fill="#FFE600" font-family="'JetBrains Mono'" font-size="9" font-weight="700">Fraud aggregates & feature store</text>
+          <text x="620" y="242" text-anchor="middle" fill="#FFE600" font-family="'JetBrains Mono'" font-size="9" font-weight="700">Fraud aggregates &amp; feature store</text>
 
           <!-- Consumers Column -->
           <path d="M 730 225 L 780 225" stroke="#000" stroke-width="3"/>
@@ -901,7 +945,7 @@
           <text x="865" y="135" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="700">PowerBI / Databricks SQL</text>
 
           <rect x="790" y="180" width="150" height="100" fill="#00F5A0" stroke="#000" stroke-width="3"/>
-          <text x="865" y="215" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900">ALERTING & DLQ</text>
+          <text x="865" y="215" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900">ALERTING &amp; DLQ</text>
           <text x="865" y="235" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="700">Slack / PagerDuty / S3</text>
           <text x="865" y="255" text-anchor="middle" font-family="'JetBrains Mono'" font-size="8" font-weight="800">&lt; 50ms Notification</text>
         </svg>
@@ -913,100 +957,103 @@
       </div>
     </section>
 
-    <!-- SLIDE 5: Path 1: Zero-DB-Inserts Streaming Ingestion -->
+    <!-- SLIDE 5: Workflow A: Real-Time Transaction Ingestion -->
     <section class="slide" id="slide-5">
       <div>
-        <div class="editorial-tag yellow">PATH 01 DEEP DIVE</div>
-        <h2 class="slide-title">Path 1: Zero-DB-Inserts Streaming Ingestion</h2>
-        <p class="slide-subtitle">How synthetic payment events move from RateController to Amazon MSK and land on S3 Bronze without touching relational tables.</p>
+        <div class="editorial-tag yellow">WORKFLOW A &bull; REAL-TIME STREAMING</div>
+        <h2 class="slide-title">Workflow A: Zero-DB Real-Time Streaming Ingestion</h2>
+        <p class="slide-subtitle">Synthetic financial transactions stream directly through RateController to Amazon MSK and land on S3 Bronze.</p>
       </div>
 
       <!-- Horizontal Flow Graphic -->
       <div class="stream-flow">
         <div class="stream-node">
           <div class="step-num">STEP 1</div>
-          <h4 style="font-size:14px; font-weight:800;">Transaction Generator</h4>
-          <p style="font-size:11px; margin-top:6px; color:#555;">RateController creates POS, ATM, E-Commerce streams</p>
-          <div class="mono-code" style="font-size:10px; margin-top:8px;">10 – 100+ TPS</div>
+          <h4 style="font-size:13px; font-weight:800;">Transaction Generator</h4>
+          <p style="font-size:11px; margin-top:5px; color:#555;">RateController creates POS, ATM, E-Commerce streams</p>
+          <div class="mono-code" style="font-size:10px; margin-top:6px;">10 – 100+ TPS</div>
         </div>
 
         <div class="stream-arrow">&rarr;</div>
 
         <div class="stream-node" style="background:#FFE600;">
           <div class="step-num">STEP 2</div>
-          <h4 style="font-size:14px; font-weight:800;">Zero-DB Producer</h4>
-          <p style="font-size:11px; margin-top:6px; color:#111;">Bypasses RDBMS completely to avoid thread contention</p>
-          <div class="mono-code" style="font-size:10px; margin-top:8px; background:#000; color:#FFE600;">Direct Kafka Async</div>
+          <h4 style="font-size:13px; font-weight:800;">Zero-DB Producer</h4>
+          <p style="font-size:11px; margin-top:5px; color:#111;">Bypasses RDBMS completely to avoid thread contention</p>
+          <div class="mono-code" style="font-size:10px; margin-top:6px; background:#000; color:#FFE600;">Direct Kafka Async</div>
         </div>
 
         <div class="stream-arrow">&rarr;</div>
 
         <div class="stream-node" style="background:#7C3AED; color:#FFF;">
           <div class="step-num" style="background:#FFF; color:#000;">STEP 3</div>
-          <h4 style="font-size:14px; font-weight:800; color:#FFF;">Amazon MSK Topic</h4>
-          <p style="font-size:11px; margin-top:6px; color:#DDD;">4 partitions keyed by transaction_id with 7-day retention</p>
-          <div class="mono-code" style="font-size:10px; margin-top:8px; background:#111; color:#00F5A0;">payment-transactions</div>
+          <h4 style="font-size:13px; font-weight:800; color:#FFF;">Amazon MSK Topic</h4>
+          <p style="font-size:11px; margin-top:5px; color:#DDD;">4 partitions keyed by transaction_id with 7-day retention</p>
+          <div class="mono-code" style="font-size:10px; margin-top:6px; background:#111; color:#00F5A0;">payment-transactions</div>
         </div>
 
         <div class="stream-arrow">&rarr;</div>
 
         <div class="stream-node">
           <div class="step-num">STEP 4</div>
-          <h4 style="font-size:14px; font-weight:800;">Kafka Connect S3</h4>
-          <p style="font-size:11px; margin-top:6px; color:#555;">Flushes compressed micro-batches every 60s or 10k recs</p>
-          <div class="mono-code" style="font-size:10px; margin-top:8px;">json.gz Micro-batch</div>
+          <h4 style="font-size:13px; font-weight:800;">Kafka Connect S3</h4>
+          <p style="font-size:11px; margin-top:5px; color:#555;">Flushes compressed micro-batches every 60s or 10k recs</p>
+          <div class="mono-code" style="font-size:10px; margin-top:6px;">json.gz Micro-batch</div>
         </div>
 
         <div class="stream-arrow">&rarr;</div>
 
         <div class="stream-node" style="background:#00F5A0;">
           <div class="step-num">STEP 5</div>
-          <h4 style="font-size:14px; font-weight:800;">S3 Bronze Bucket</h4>
-          <p style="font-size:11px; margin-top:6px; color:#000;">Year/Month/Day time-partitioned immutable raw storage</p>
-          <div class="mono-code" style="font-size:10px; margin-top:8px; background:#000; color:#FFF;">s3://lakehouse/bronze/</div>
+          <h4 style="font-size:13px; font-weight:800;">S3 Bronze Landing</h4>
+          <p style="font-size:11px; margin-top:5px; color:#000;">Year/Month/Day time-partitioned raw lakehouse storage</p>
+          <div class="mono-code" style="font-size:10px; margin-top:6px; background:#000; color:#FFF;">s3://lakehouse/bronze/</div>
         </div>
       </div>
 
-      <div class="grid-2" style="margin-top:16px;">
+      <div class="grid-2" style="margin-top:14px;">
         <div class="neo-card">
-          <h4 style="font-size:14px; font-weight:800; margin-bottom:8px;">Payload Key Attributes</h4>
-          <p style="font-size:12px; line-height:1.5; color:#333;">
-            <code>transaction_id</code> (UUIDv4), <code>account_id</code>, <code>card_number_masked</code>, <code>amount</code> (EUR/USD), <code>merchant_id</code>, <code>merchant_category_code</code> (MCC), <code>pos_terminal_id</code>, <code>channel</code>, <code>timestamp_epoch_ms</code>.
-          </p>
+          <h4 style="font-size:13px; font-weight:800; margin-bottom:6px;">Technical Workflow Attributes</h4>
+          <ul style="font-size:11px; line-height:1.6; margin-left:16px; color:#333;">
+            <li><strong>Trigger / Mode:</strong> Continuous background event loop via FastAPI asynchronous workers.</li>
+            <li><strong>Payload Schema:</strong> <code>transaction_id</code> (UUID), <code>account_id</code>, <code>amount</code>, <code>mcc</code>, <code>timestamp_ms</code>.</li>
+            <li><strong>Error Handling:</strong> Retry buffer with exponential backoff; unparsable records route to DLQ topic.</li>
+            <li><strong>Downstream Consumer:</strong> Databricks Auto Loader notebook <code>VALIDSIC8_08A</code>.</li>
+          </ul>
         </div>
         <div class="neo-card purple-tint">
-          <h4 style="font-size:14px; font-weight:800; margin-bottom:8px;">Performance Profile</h4>
+          <h4 style="font-size:13px; font-weight:800; margin-bottom:6px;">Performance Invariant</h4>
           <p style="font-size:12px; line-height:1.5; color:#111;">
-            Sub-millisecond producer publish latency with acks=all and Snappy compression. Zero thread waiting on relational database tables guarantees linear scaling as event volume surges.
+            Sub-millisecond producer publish latency with <code>acks=all</code> and Snappy compression. Zero thread waiting on relational database tables guarantees linear scaling as transaction volume spikes.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- SLIDE 6: Path 2: Relational Demographics via Debezium CDC -->
+    <!-- SLIDE 6: Workflow B: PostgreSQL CDC via Debezium -->
     <section class="slide" id="slide-6">
       <div>
-        <div class="editorial-tag purple">PATH 02 DEEP DIVE</div>
-        <h2 class="slide-title">Path 2: Relational Demographics via Debezium CDC</h2>
+        <div class="editorial-tag purple">WORKFLOW B &bull; CHANGE DATA CAPTURE</div>
+        <h2 class="slide-title">Workflow B: PostgreSQL CDC via Debezium 2.5</h2>
         <p class="slide-subtitle">Capturing customer and card dimension changes directly from PostgreSQL WAL logs without dual-writes or periodic polling.</p>
       </div>
 
-      <div class="grid-split" style="margin:20px 0; height:340px;">
+      <div class="grid-split" style="margin:16px 0; height:340px;">
         <!-- Left: Before / After Mutation Concept -->
         <div class="neo-card yellow" style="display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <h3 style="font-size:18px; font-weight:900;">WAL Logical Decoding</h3>
-            <p style="font-size:13px; line-height:1.5; margin-top:10px;">
-              PostgreSQL 18 Write-Ahead Log (WAL) with <code>test_decoding</code> / <code>pgoutput</code> plugin records committed rows without overhead on active user queries.
+            <h3 style="font-size:17px; font-weight:900;">WAL Logical Decoding</h3>
+            <p style="font-size:12px; line-height:1.4; margin-top:8px;">
+              PostgreSQL 18 Write-Ahead Log (WAL) with <code>pgoutput</code> plugin records committed rows without overhead on active user queries.
             </p>
           </div>
-          <div style="background:#FFF; border:2px solid #000; padding:12px; box-shadow:3px 3px 0px #000;">
-            <div style="font-size:11px; font-family:'JetBrains Mono'; font-weight:800;">CDC RECORD PAYLOAD</div>
-            <div style="font-size:11px; font-family:'JetBrains Mono'; margin-top:6px; color:#555;">
-              "op": "u",<br>
+          <div style="background:#FFF; border:2px solid #000; padding:10px; box-shadow:3px 3px 0px #000;">
+            <div style="font-size:11px; font-family:'JetBrains Mono'; font-weight:800;">CDC EVENT PAYLOAD (JSON)</div>
+            <div style="font-size:10px; font-family:'JetBrains Mono'; margin-top:5px; color:#333;">
+              "op": "u", /* insert 'c', update 'u', delete 'd' */<br>
               "before": { "credit_limit": 5000 },<br>
               "after": { "credit_limit": 8500 },<br>
-              "ts_ms": 1793302000
+              "source": { "table": "cards", "ts_ms": 1793302000 }
             </div>
           </div>
           <div class="mono-code" style="font-size:11px;">Zero dual-write inconsistency</div>
@@ -1014,66 +1061,63 @@
 
         <!-- Right: Flow Architecture -->
         <div class="diagram-box">
-          <h4 style="font-size:14px; font-weight:900; margin-bottom:12px;">CDC Ingestion Sequence</h4>
-          <svg viewBox="0 0 540 230" style="width:100%; height:100%;">
-            <!-- Postgres Database -->
-            <rect x="20" y="40" width="130" height="150" fill="#EDE9FE" stroke="#000" stroke-width="3"/>
-            <text x="85" y="70" text-anchor="middle" font-family="'JetBrains Mono'" font-size="12" font-weight="900">POSTGRESQL 18</text>
-            <text x="85" y="90" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="700">Demographic DB</text>
-            <rect x="35" y="110" width="100" height="30" fill="#7C3AED" stroke="#000" stroke-width="2"/>
-            <text x="85" y="128" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono'" font-size="10" font-weight="800">WAL STREAM</text>
-            <text x="85" y="165" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" color="#666">ACID Commits</text>
+          <h4 style="font-size:13px; font-weight:900; margin-bottom:10px;">CDC Ingestion Sequence</h4>
+          <svg viewBox="0 0 540 220" style="width:100%; height:100%;">
+            <rect x="20" y="30" width="130" height="150" fill="#EDE9FE" stroke="#000" stroke-width="3"/>
+            <text x="85" y="60" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900">POSTGRESQL 18</text>
+            <text x="85" y="80" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="700">Demographic DB</text>
+            <rect x="35" y="100" width="100" height="30" fill="#7C3AED" stroke="#000" stroke-width="2"/>
+            <text x="85" y="118" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono'" font-size="10" font-weight="800">WAL STREAM</text>
+            <text x="85" y="155" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" color="#666">ACID Commits</text>
 
-            <!-- Connector -->
-            <path d="M 150 125 L 210 125" stroke="#000" stroke-width="3"/>
-            <polygon points="206,120 218,125 206,130" fill="#000"/>
+            <path d="M 150 115 L 210 115" stroke="#000" stroke-width="3"/>
+            <polygon points="206,110 218,115 206,120" fill="#000"/>
 
-            <rect x="220" y="60" width="130" height="110" fill="#FFF" stroke="#000" stroke-width="3"/>
-            <text x="285" y="90" text-anchor="middle" font-family="'JetBrains Mono'" font-size="12" font-weight="900">DEBEZIUM 2.5</text>
-            <text x="285" y="110" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="700">Kafka Connect</text>
-            <text x="285" y="135" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800" fill="#7C3AED">Snapshot + CDC</text>
+            <rect x="220" y="50" width="130" height="110" fill="#FFF" stroke="#000" stroke-width="3"/>
+            <text x="285" y="80" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900">DEBEZIUM 2.5</text>
+            <text x="285" y="100" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="700">Kafka Connect</text>
+            <text x="285" y="125" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800" fill="#7C3AED">Snapshot + CDC</text>
 
-            <!-- Kafka Topic -->
-            <path d="M 350 125 L 400 125" stroke="#000" stroke-width="3"/>
-            <polygon points="396,120 408,125 396,130" fill="#000"/>
+            <path d="M 350 115 L 400 115" stroke="#000" stroke-width="3"/>
+            <polygon points="396,110 408,115 396,120" fill="#000"/>
 
-            <rect x="410" y="60" width="110" height="110" fill="#00F5A0" stroke="#000" stroke-width="3"/>
-            <text x="465" y="90" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900">KAFKA TOPIC</text>
-            <text x="465" y="110" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="700">postgres.public</text>
-            <text x="465" y="125" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="700">.users / .cards</text>
-            <text x="465" y="150" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800">&darr; S3 Bronze</text>
+            <rect x="410" y="50" width="110" height="110" fill="#00F5A0" stroke="#000" stroke-width="3"/>
+            <text x="465" y="80" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900">KAFKA TOPIC</text>
+            <text x="465" y="100" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="700">postgres.public</text>
+            <text x="465" y="115" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="700">.users / .cards</text>
+            <text x="465" y="140" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800">&darr; S3 Bronze</text>
           </svg>
         </div>
       </div>
 
-      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:8px 14px;">
-        <strong>RESULT:</strong> Customer demographic updates arrive downstream in &lt; 500ms, enabling real-time risk profile adjustments.
+      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:7px 12px;">
+        <strong>DOWNSTREAM IMPACT:</strong> Changes upserted into Databricks Silver user/card dimension tables via Delta MERGE operations.
       </div>
     </section>
 
-    <!-- SLIDE 7: Path 3: Scheduled Batch Reference Ingestion -->
+    <!-- SLIDE 7: Workflow C: Scheduled Reference Data Ingestion -->
     <section class="slide" id="slide-7">
       <div>
-        <div class="editorial-tag mint">PATH 03 DEEP DIVE</div>
-        <h2 class="slide-title">Path 3: Scheduled Batch Reference Ingestion</h2>
+        <div class="editorial-tag mint">WORKFLOW C &bull; BATCH REFERENCE</div>
+        <h2 class="slide-title">Workflow C: Scheduled Batch Reference Ingestion</h2>
         <p class="slide-subtitle">Airflow-orchestrated snapshot extraction of reference dimensions into columnar snappy-compressed Parquet files on S3.</p>
       </div>
 
-      <div class="grid-2" style="margin:20px 0; height:340px;">
+      <div class="grid-2" style="margin:16px 0; height:340px;">
         <!-- Left: Schedule & Execution Timeline -->
         <div class="neo-card" style="display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <h3 style="font-size:18px; font-weight:900;">Batch Extraction Cycle</h3>
-            <p style="font-size:13px; line-height:1.5; margin-top:8px;">
+            <h3 style="font-size:17px; font-weight:900;">Batch Extraction Cycle</h3>
+            <p style="font-size:12px; line-height:1.5; margin-top:8px;">
               Static and semi-static dimensions (merchant profiles, terminal configurations, branch geo-locations, and MCC risk categories) are ingested daily.
             </p>
-            <div style="margin-top:16px;">
-              <div style="font-family:'JetBrains Mono'; font-size:12px; font-weight:800; margin-bottom:6px;">AIRFLOW DAG: <code>02_batch_reference_ingestion</code></div>
-              <div style="font-size:12px; color:#555; line-height:1.6;">
-                &bull; Schedule: Daily at 02:00 UTC<br>
-                &bull; Execution Engine: Pandas / PyArrow worker<br>
-                &bull; Compression: Snappy Parquet (90% size reduction)<br>
-                &bull; Validation: Schema parity check on schema header
+            <div style="margin-top:14px;">
+              <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; margin-bottom:5px;">AIRFLOW DAG: <code>02_batch_reference_ingestion</code></div>
+              <div style="font-size:11px; color:#555; line-height:1.6;">
+                &bull; <strong>Trigger:</strong> Cron schedule <code>0 2 * * *</code> (Daily at 02:00 UTC)<br>
+                &bull; <strong>Tasks:</strong> <code>extract_mcc_reference</code> &rarr; <code>extract_cities_reference</code><br>
+                &bull; <strong>Validation:</strong> Schema parity check on headers and non-null keys<br>
+                &bull; <strong>Format:</strong> Snappy-compressed Parquet (90% size reduction)
               </div>
             </div>
           </div>
@@ -1084,51 +1128,51 @@
 
         <!-- Right: Reference Dataset Matrix -->
         <div class="neo-card yellow" style="display:flex; flex-direction:column; justify-content:space-between;">
-          <h3 style="font-size:18px; font-weight:900;">Reference Tables Catalog</h3>
-          <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
-            <div style="background:#FFF; border:2px solid #000; padding:10px; box-shadow:2px 2px 0px #000;">
-              <strong style="font-size:13px;">merchants.parquet</strong>
-              <div style="font-size:11px; color:#555; font-family:'JetBrains Mono';">merchant_id, merchant_name, mcc, city, state, zip, risk_score</div>
+          <h3 style="font-size:17px; font-weight:900;">Reference Tables Catalog</h3>
+          <div style="display:flex; flex-direction:column; gap:9px; margin-top:8px;">
+            <div style="background:#FFF; border:2px solid #000; padding:9px; box-shadow:2px 2px 0px #000;">
+              <strong style="font-size:12px;">merchants.parquet</strong>
+              <div style="font-size:10px; color:#555; font-family:'JetBrains Mono';">merchant_id, merchant_name, mcc, city, state, zip, risk_score</div>
             </div>
-            <div style="background:#FFF; border:2px solid #000; padding:10px; box-shadow:2px 2px 0px #000;">
-              <strong style="font-size:13px;">pos_terminals.parquet</strong>
-              <div style="font-size:11px; color:#555; font-family:'JetBrains Mono';">terminal_id, merchant_id, model, firmware_version, is_chip_enabled</div>
+            <div style="background:#FFF; border:2px solid #000; padding:9px; box-shadow:2px 2px 0px #000;">
+              <strong style="font-size:12px;">pos_terminals.parquet</strong>
+              <div style="font-size:10px; color:#555; font-family:'JetBrains Mono';">terminal_id, merchant_id, model, firmware_version, is_chip_enabled</div>
             </div>
-            <div style="background:#FFF; border:2px solid #000; padding:10px; box-shadow:2px 2px 0px #000;">
-              <strong style="font-size:13px;">mcc_risk_categories.parquet</strong>
-              <div style="font-size:11px; color:#555; font-family:'JetBrains Mono';">mcc_code, industry, baseline_fraud_multiplier, velocity_limit</div>
+            <div style="background:#FFF; border:2px solid #000; padding:9px; box-shadow:2px 2px 0px #000;">
+              <strong style="font-size:12px;">mcc_risk_categories.parquet</strong>
+              <div style="font-size:10px; color:#555; font-family:'JetBrains Mono';">mcc_code, industry, baseline_fraud_multiplier, velocity_limit</div>
             </div>
           </div>
           <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#000; color:#FFE600; padding:6px 10px;">
-            Zero cross-table joins during streaming inference
+            Preloaded into memory to eliminate runtime OLTP joins
           </div>
         </div>
       </div>
 
-      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:8px 14px;">
-        <strong>OPTIMIZATION:</strong> Reference tables are pre-loaded into memory and Redis during startup to eliminate relational join latencies.
+      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:7px 12px;">
+        <strong>DOWNSTREAM CONSUMER:</strong> Joined in Databricks Silver &amp; Gold notebooks to enrich transactions with merchant risk metrics.
       </div>
     </section>
 
-    <!-- SLIDE 8: Path 4: Sub-10ms Online Fraud Scoring -->
+    <!-- SLIDE 8: Workflow D: Real-Time Fraud Inference & Redis -->
     <section class="slide" id="slide-8">
       <div>
-        <div class="editorial-tag yellow">PATH 04 DEEP DIVE</div>
-        <h2 class="slide-title">Path 4: Sub-10ms Online Fraud Scoring</h2>
+        <div class="editorial-tag yellow">WORKFLOW D &bull; REAL-TIME ML INFERENCE</div>
+        <h2 class="slide-title">Workflow D: Sub-10ms Fraud Inference with Redis</h2>
         <p class="slide-subtitle">In-flight transaction scoring combining in-memory Redis feature hydration with LightGBM inference under strict SLAs.</p>
       </div>
 
-      <div class="grid-split" style="margin:20px 0; height:340px;">
+      <div class="grid-split" style="margin:16px 0; height:340px;">
         <!-- Left: SLA Box -->
         <div class="neo-card black" style="display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#FFE600; color:#000; padding:3px 8px; display:inline-block; margin-bottom:8px;">LATENCY SLA</div>
-            <div class="stat-badge" style="background:#FFF; color:#000; box-shadow:4px 4px 0px #7C3AED; font-size:42px;">4.2 ms</div>
-            <p style="font-size:13px; color:#CCC; line-height:1.5; margin-top:8px;">
-              Total measured inference roundtrip from Kafka event consumption to risk score emission:
+            <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#FFE600; color:#000; padding:2px 7px; display:inline-block; margin-bottom:6px;">LATENCY SLA</div>
+            <div class="stat-badge" style="background:#FFF; color:#000; box-shadow:4px 4px 0px #7C3AED; font-size:38px;">4.2 ms</div>
+            <p style="font-size:12px; color:#CCC; line-height:1.4; margin-top:6px;">
+              Measured inference roundtrip breakdown:
             </p>
-            <ul style="font-size:12px; color:#AAA; margin:10px 0 0 16px; line-height:1.6;">
-              <li>Kafka fetch & deserialization: 0.8ms</li>
+            <ul style="font-size:11px; color:#AAA; margin:8px 0 0 16px; line-height:1.5;">
+              <li>Kafka fetch &amp; deserialization: 0.8ms</li>
               <li>Redis feature hydration: 1.6ms</li>
               <li>LightGBM v2 model eval: 1.4ms</li>
               <li>Kafka alert / metric emit: 0.4ms</li>
@@ -1141,148 +1185,147 @@
 
         <!-- Right: Inference Pipeline Visual -->
         <div class="diagram-box">
-          <h4 style="font-size:14px; font-weight:900; margin-bottom:12px;">Real-Time Decision Path</h4>
-          <svg viewBox="0 0 540 230" style="width:100%; height:100%;">
-            <!-- Kafka Inbound -->
-            <rect x="10" y="40" width="100" height="60" fill="#7C3AED" stroke="#000" stroke-width="3"/>
-            <text x="60" y="65" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono'" font-size="10" font-weight="900">KAFKA EVENT</text>
-            <text x="60" y="82" text-anchor="middle" fill="#FFE600" font-family="'JetBrains Mono'" font-size="9" font-weight="700">Raw Tx</text>
+          <h4 style="font-size:13px; font-weight:900; margin-bottom:10px;">Real-Time Decision Path</h4>
+          <svg viewBox="0 0 540 220" style="width:100%; height:100%;">
+            <rect x="10" y="35" width="100" height="60" fill="#7C3AED" stroke="#000" stroke-width="3"/>
+            <text x="60" y="60" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono'" font-size="10" font-weight="900">KAFKA EVENT</text>
+            <text x="60" y="77" text-anchor="middle" fill="#FFE600" font-family="'JetBrains Mono'" font-size="9" font-weight="700">payment-tx</text>
 
-            <path d="M 110 70 L 150 70" stroke="#000" stroke-width="3"/>
-            <polygon points="146,65 158,70 146,75" fill="#000"/>
+            <path d="M 110 65 L 150 65" stroke="#000" stroke-width="3"/>
+            <polygon points="146,60 158,65 146,70" fill="#000"/>
 
-            <!-- Redis Hydration -->
-            <rect x="160" y="25" width="110" height="90" fill="#FFE600" stroke="#000" stroke-width="3"/>
-            <text x="215" y="55" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900">REDIS CACHE</text>
-            <text x="215" y="72" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="700">Online Profile</text>
-            <text x="215" y="90" text-anchor="middle" font-family="'JetBrains Mono'" font-size="8" font-weight="800">24h Velocity &amp; Avg</text>
+            <rect x="160" y="20" width="110" height="90" fill="#FFE600" stroke="#000" stroke-width="3"/>
+            <text x="215" y="50" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900">REDIS CACHE</text>
+            <text x="215" y="67" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="700">Online Profile</text>
+            <text x="215" y="85" text-anchor="middle" font-family="'JetBrains Mono'" font-size="8" font-weight="800">24h Velocity &amp; Avg</text>
 
-            <path d="M 270 70 L 310 70" stroke="#000" stroke-width="3"/>
-            <polygon points="306,65 318,70 306,75" fill="#000"/>
+            <path d="M 270 65 L 310 65" stroke="#000" stroke-width="3"/>
+            <polygon points="306,60 318,65 306,70" fill="#000"/>
 
-            <!-- LightGBM Scorer -->
-            <rect x="320" y="25" width="110" height="90" fill="#00F5A0" stroke="#000" stroke-width="3"/>
-            <text x="375" y="55" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900">LIGHTGBM V2</text>
-            <text x="375" y="72" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="700">Tree Inference</text>
-            <text x="375" y="90" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800">Fraud Prob [0..1]</text>
+            <rect x="320" y="20" width="110" height="90" fill="#00F5A0" stroke="#000" stroke-width="3"/>
+            <text x="375" y="50" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900">LIGHTGBM V2</text>
+            <text x="375" y="67" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="700">Tree Inference</text>
+            <text x="375" y="85" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800">Fraud Prob [0..1]</text>
 
-            <!-- Decision Fork -->
-            <path d="M 430 55 L 470 35" stroke="#000" stroke-width="3"/>
-            <polygon points="466,30 478,35 466,40" fill="#000"/>
+            <path d="M 430 50 L 470 30" stroke="#000" stroke-width="3"/>
+            <polygon points="466,25 478,30 466,35" fill="#000"/>
 
-            <path d="M 430 85 L 470 105" stroke="#000" stroke-width="3"/>
-            <polygon points="466,100 478,105 466,110" fill="#000"/>
+            <path d="M 430 80 L 470 100" stroke="#000" stroke-width="3"/>
+            <polygon points="466,95 478,100 466,105" fill="#000"/>
 
-            <rect x="480" y="15" width="55" height="40" fill="#FF4757" stroke="#000" stroke-width="2"/>
-            <text x="507" y="38" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono'" font-size="8" font-weight="900">ALERT</text>
+            <rect x="480" y="10" width="55" height="40" fill="#FF4757" stroke="#000" stroke-width="2"/>
+            <text x="507" y="33" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono'" font-size="8" font-weight="900">ALERT</text>
 
-            <rect x="480" y="85" width="55" height="40" fill="#FFF" stroke="#000" stroke-width="2"/>
-            <text x="507" y="108" text-anchor="middle" font-family="'JetBrains Mono'" font-size="8" font-weight="900">ALLOW</text>
+            <rect x="480" y="80" width="55" height="40" fill="#FFF" stroke="#000" stroke-width="2"/>
+            <text x="507" y="103" text-anchor="middle" font-family="'JetBrains Mono'" font-size="8" font-weight="900">ALLOW</text>
 
-            <!-- Bottom Summary strip -->
-            <rect x="10" y="150" width="520" height="60" fill="#EDE9FE" stroke="#000" stroke-width="2"/>
-            <text x="270" y="175" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="800">
+            <rect x="10" y="145" width="520" height="60" fill="#EDE9FE" stroke="#000" stroke-width="2"/>
+            <text x="270" y="170" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="800">
               ASYNC ALERT PUBLISH &rarr; fraud-alerts TOPIC (NO BLOCKING ON PRIMARY STREAM)
             </text>
-            <text x="270" y="195" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="600">
-              Model score &gt; 0.85 generates immediate alert payload with risk factors
+            <text x="270" y="190" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="600">
+              Score &gt; threshold triggers JSON alert payload with explainable risk factors
             </text>
           </svg>
         </div>
       </div>
 
-      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:8px 14px;">
-        <strong>ISOLATION:</strong> Inference failures trigger circuit breakers that fail open to prevent blocking customer card authorization.
+      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:7px 12px;">
+        <strong>FAILURE ISOLATION:</strong> Redis downtime triggers fallback to local memory state store to ensure zero inference outages.
       </div>
     </section>
 
-    <!-- SLIDE 9: Feature Engineering Pipeline -->
+    <!-- SLIDE 9: Databricks Data Lineage: Code-Derived Provenance (NEW) -->
     <section class="slide" id="slide-9">
       <div>
-        <div class="editorial-tag purple">ML ARCHITECTURE</div>
-        <h2 class="slide-title">Feature Engineering & In-Flight Transformation</h2>
-        <p class="slide-subtitle">Transforming raw financial transaction telemetry into high-predictive-value behavioral signals in milliseconds.</p>
+        <div class="editorial-tag purple">DATABRICKS LAKEHOUSE &bull; DATA LINEAGE</div>
+        <h2 class="slide-title">Databricks Lineage: Code-Derived End-to-End Provenance</h2>
+        <p class="slide-subtitle">Explicit mapping of data transformations across Bronze, Silver contract v2.1, Gold marts, and Quarantine DLQ.</p>
       </div>
 
-      <div class="grid-2" style="margin:20px 0; height:340px;">
-        <!-- Left: Raw to Engineered Transformation Table -->
-        <div class="neo-card" style="display:flex; flex-direction:column; justify-content:space-between;">
-          <h3 style="font-size:18px; font-weight:900;">Online Feature Vector</h3>
-          <div style="font-family:'JetBrains Mono'; font-size:11px; line-height:1.7;">
-            <div style="border-bottom:1px solid #000; padding:4px 0; display:flex; justify-content:space-between;">
-              <strong>Raw Attribute</strong><strong>Engineered Feature</strong>
-            </div>
-            <div style="padding:4px 0; display:flex; justify-content:space-between;">
-              <span>amount</span><span style="color:#7C3AED; font-weight:800;">zscore_amt_vs_card_avg</span>
-            </div>
-            <div style="padding:4px 0; display:flex; justify-content:space-between;">
-              <span>timestamp_epoch_ms</span><span style="color:#7C3AED; font-weight:800;">tx_velocity_1h, 24h</span>
-            </div>
-            <div style="padding:4px 0; display:flex; justify-content:space-between;">
-              <span>merchant_lat, long</span><span style="color:#7C3AED; font-weight:800;">haversine_distance_prev_tx</span>
-            </div>
-            <div style="padding:4px 0; display:flex; justify-content:space-between;">
-              <span>card_holder_zip</span><span style="color:#7C3AED; font-weight:800;">is_foreign_country</span>
-            </div>
-            <div style="padding:4px 0; display:flex; justify-content:space-between;">
-              <span>mcc_code</span><span style="color:#7C3AED; font-weight:800;">mcc_historical_risk_rate</span>
-            </div>
-          </div>
-          <div class="mono-code" style="font-size:11px;">
-            Feature Count: 18 Online Real-Time Signals
-          </div>
-        </div>
+      <!-- Lineage Flow Diagram -->
+      <div class="diagram-box" style="margin:14px 0; height:350px;">
+        <svg viewBox="0 0 940 310" class="diagram-svg">
+          <!-- Stage 1: S3 Landing -->
+          <rect x="10" y="30" width="170" height="75" fill="#FFE600" stroke="#000" stroke-width="3"/>
+          <text x="95" y="55" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900">S3 BRONZE BUCKET</text>
+          <text x="95" y="73" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="700">s3://lakehouse/bronze/</text>
+          <text x="95" y="90" text-anchor="middle" font-family="'JetBrains Mono'" font-size="8" fill="#444">transactions/ (json.gz)</text>
 
-        <!-- Right: Model Metrics & Feature Importance -->
-        <div class="neo-card yellow" style="display:flex; flex-direction:column; justify-content:space-between;">
-          <h3 style="font-size:18px; font-weight:900;">Model Quality & Feature Importance</h3>
-          <div>
-            <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-              <span class="stat-badge" style="font-size:24px; padding:4px 10px;">ROC-AUC 99.4%</span>
-              <span class="stat-badge" style="font-size:24px; padding:4px 10px; background:#7C3AED; color:#FFF;">PR-AUC 94.1%</span>
-            </div>
-            <div style="font-size:12px; line-height:1.6; margin-top:10px;">
-              <strong>Top Predictive Features:</strong>
-              <ol style="margin-left:18px; margin-top:4px;">
-                <li><code>haversine_distance_prev_tx</code> (Impossible speed detection)</li>
-                <li><code>zscore_amt_vs_card_avg</code> (Anomalous purchase size)</li>
-                <li><code>tx_velocity_1h</code> (Card-testing bot attacks)</li>
-                <li><code>mcc_historical_risk_rate</code> (High-risk merchant class)</li>
-              </ol>
-            </div>
-          </div>
-          <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#000; color:#FFF; padding:6px 10px;">
-            Evaluation on 200,000 holdout transaction records
-          </div>
-        </div>
+          <path d="M 180 67 L 240 67" stroke="#000" stroke-width="3"/>
+          <polygon points="236,62 248,67 236,72" fill="#000"/>
+
+          <!-- Stage 2: Bronze AutoLoader Notebook -->
+          <rect x="250" y="20" width="200" height="95" fill="#FFF" stroke="#000" stroke-width="3"/>
+          <text x="350" y="45" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900">NOTEBOOK: VALIDSIC8_08A</text>
+          <text x="350" y="63" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" fill="#7C3AED" font-weight="800">AutoLoader Streaming Parser</text>
+          <text x="350" y="80" text-anchor="middle" font-family="'JetBrains Mono'" font-size="8" fill="#444">v3.1 Envelope Schema Fix</text>
+          <text x="350" y="98" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800">&darr; sic8_bronze.payment_tx</text>
+
+          <path d="M 450 67 L 510 67" stroke="#000" stroke-width="3"/>
+          <polygon points="506,62 518,67 506,72" fill="#000"/>
+
+          <!-- Stage 3: Silver Contract Processing -->
+          <rect x="520" y="20" width="200" height="95" fill="#00F5A0" stroke="#000" stroke-width="3"/>
+          <text x="620" y="45" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900">NOTEBOOK: VALIDSIC8_08B</text>
+          <text x="620" y="63" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800">Contract v2.1 &amp; Deduplication</text>
+          <text x="620" y="80" text-anchor="middle" font-family="'JetBrains Mono'" font-size="8" fill="#111">Refund Logic + Type Parity</text>
+          <text x="620" y="98" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="900">&darr; sic8_silver.payment_tx</text>
+
+          <path d="M 720 67 L 775 67" stroke="#000" stroke-width="3"/>
+          <polygon points="771,62 783,67 771,72" fill="#000"/>
+
+          <!-- Stage 4: Gold Analytics & Features -->
+          <rect x="785" y="20" width="145" height="95" fill="#7C3AED" stroke="#000" stroke-width="3"/>
+          <text x="857" y="45" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono'" font-size="11" font-weight="900">NOTEBOOK: 04.1</text>
+          <text x="857" y="63" text-anchor="middle" fill="#FFE600" font-family="'JetBrains Mono'" font-size="9" font-weight="800">Gold Fraud Marts</text>
+          <text x="857" y="80" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono'" font-size="8">Daily Risk Aggregates</text>
+          <text x="857" y="98" text-anchor="middle" fill="#00F5A0" font-family="'JetBrains Mono'" font-size="9" font-weight="800">&darr; sic8_gold.*</text>
+
+          <!-- Branch 5: Quarantine & DLQ Notebook (08C) -->
+          <path d="M 350 115 L 350 180" stroke="#FF4757" stroke-width="3"/>
+          <polygon points="345,176 350,188 355,176" fill="#FF4757"/>
+
+          <rect x="250" y="190" width="200" height="95" fill="#FFF0F1" stroke="#FF4757" stroke-width="3"/>
+          <text x="350" y="215" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900" fill="#FF4757">NOTEBOOK: 08C DLQ</text>
+          <text x="350" y="233" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800">Quarantine &amp; Redrive</text>
+          <text x="350" y="250" text-anchor="middle" font-family="'JetBrains Mono'" font-size="8" fill="#555">Remediates Malformed Schema</text>
+          <text x="350" y="268" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800">&darr; sic8_quarantine.dlq_tx</text>
+
+          <!-- Downstream Lineage Consumers -->
+          <rect x="520" y="190" width="410" height="95" fill="#EDE9FE" stroke="#000" stroke-width="3"/>
+          <text x="725" y="215" text-anchor="middle" font-family="'JetBrains Mono'" font-size="11" font-weight="900">DOWNSTREAM CONSUMERS &amp; SERVING LAYER</text>
+          <text x="725" y="235" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="700">1. Databricks SQL &amp; PowerBI Operational Dashboards</text>
+          <text x="725" y="253" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="700">2. Feature Store Backfills for LightGBM Offline Retraining</text>
+          <text x="725" y="271" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="700">3. Audit &amp; Compliance Historical Risk Profiling</text>
+        </svg>
       </div>
 
-      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:8px 14px;">
-        <strong>TRAINING PARITY:</strong> Databricks Gold feature definitions match Redis online pipeline exactly to prevent training/serving skew.
+      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:7px 12px; display:flex; justify-content:space-between;">
+        <span>CODE-DERIVED LINEAGE VERIFIED FROM NOTEBOOKS IN databricks/notebooks/</span>
+        <span style="font-weight:800; color:#7C3AED;">INDEPENDENT OF LIVE CLOUD RUNTIME TO ENSURE ZERO REPO LOCK-IN</span>
       </div>
     </section>
 
-    <!-- SLIDE 10: Multi-Tier Storage Architecture -->
+    <!-- SLIDE 10: Multi-Tier Medallion Storage Architecture -->
     <section class="slide" id="slide-10">
       <div>
-        <div class="editorial-tag mint">STORAGE & LAKEHOUSE</div>
+        <div class="editorial-tag mint">STORAGE &amp; LAKEHOUSE</div>
         <h2 class="slide-title">Multi-Tier Medallion Storage Architecture</h2>
         <p class="slide-subtitle">Raw immutable ingestion landing, curated Delta Lake schemas, and business aggregate Gold marts on AWS S3.</p>
       </div>
 
-      <!-- 3 Tier Medallion Diagram -->
-      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:20px; margin:20px 0; height:340px;">
-        
+      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; margin:16px 0; height:340px;">
         <!-- Bronze -->
         <div class="neo-card" style="background:#FFF8E7; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <div class="editorial-tag yellow" style="margin-bottom:8px;">BRONZE LAYER</div>
-            <h3 style="font-size:20px; font-weight:900;">Raw Ingestion</h3>
-            <p style="font-size:12px; line-height:1.5; margin-top:8px; color:#444;">
+            <div class="editorial-tag yellow" style="margin-bottom:6px;">BRONZE LAYER</div>
+            <h3 style="font-size:18px; font-weight:900;">Raw Ingestion</h3>
+            <p style="font-size:12px; line-height:1.4; margin-top:6px; color:#444;">
               Immutable landing zone for raw streaming micro-batches, Debezium CDC logs, and snapshot reference dumps.
             </p>
-            <ul style="font-size:11px; font-family:'JetBrains Mono'; margin:12px 0 0 16px; line-height:1.6; color:#222;">
-              <li>Format: <code>json.gz</code> & <code>parquet</code></li>
+            <ul style="font-size:11px; font-family:'JetBrains Mono'; margin:10px 0 0 16px; line-height:1.6; color:#222;">
+              <li>Format: <code>json.gz</code> &amp; <code>parquet</code></li>
               <li>Partition: <code>year=YYYY/month=MM/day=DD</code></li>
               <li>Retention: 90-day cold tier transition</li>
               <li>Schema: Schema-on-read validation</li>
@@ -1294,12 +1337,12 @@
         <!-- Silver -->
         <div class="neo-card" style="background:#F0FDF4; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <div class="editorial-tag mint" style="margin-bottom:8px;">SILVER LAYER</div>
-            <h3 style="font-size:20px; font-weight:900;">Cleaned Delta Tables</h3>
-            <p style="font-size:12px; line-height:1.5; margin-top:8px; color:#444;">
+            <div class="editorial-tag mint" style="margin-bottom:6px;">SILVER LAYER</div>
+            <h3 style="font-size:18px; font-weight:900;">Cleaned Delta Tables</h3>
+            <p style="font-size:12px; line-height:1.4; margin-top:6px; color:#444;">
               Deduplicated, schema-enforced, enriched Delta tables powered by Databricks Structured Streaming and Auto Loader.
             </p>
-            <ul style="font-size:11px; font-family:'JetBrains Mono'; margin:12px 0 0 16px; line-height:1.6; color:#222;">
+            <ul style="font-size:11px; font-family:'JetBrains Mono'; margin:10px 0 0 16px; line-height:1.6; color:#222;">
               <li>Format: Delta Lake (ACID commits)</li>
               <li>Deduplication on <code>transaction_id</code></li>
               <li>CDC merges: Upsert user/card tables</li>
@@ -1312,12 +1355,12 @@
         <!-- Gold -->
         <div class="neo-card" style="background:#FAF5FF; display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <div class="editorial-tag purple" style="margin-bottom:8px;">GOLD LAYER</div>
-            <h3 style="font-size:20px; font-weight:900;">Business & ML Marts</h3>
-            <p style="font-size:12px; line-height:1.5; margin-top:8px; color:#444;">
+            <div class="editorial-tag purple" style="margin-bottom:6px;">GOLD LAYER</div>
+            <h3 style="font-size:18px; font-weight:900;">Business &amp; ML Marts</h3>
+            <p style="font-size:12px; line-height:1.4; margin-top:6px; color:#444;">
               Curated analytical aggregations, risk score distributions, merchant fraud summaries, and ML feature backfills.
             </p>
-            <ul style="font-size:11px; font-family:'JetBrains Mono'; margin:12px 0 0 16px; line-height:1.6; color:#222;">
+            <ul style="font-size:11px; font-family:'JetBrains Mono'; margin:10px 0 0 16px; line-height:1.6; color:#222;">
               <li>Daily fraud metrics per merchant</li>
               <li>Card behavioral baseline stats</li>
               <li>PowerBI / Tableau semantic models</li>
@@ -1326,174 +1369,227 @@
           </div>
           <div class="mono-code" style="font-size:10px; background:#7C3AED; color:#FFF;">s3://lakehouse-gold/</div>
         </div>
-
       </div>
 
-      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:8px 14px;">
+      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:7px 12px;">
         <strong>STORAGE EFFICIENCY:</strong> Snappy compression + Delta Lake columnar layout provides 78% S3 storage cost savings.
       </div>
     </section>
 
-    <!-- SLIDE 11: End-to-End Pipeline Orchestration -->
+    <!-- SLIDE 11: Feature Engineering & In-Flight Transformation -->
     <section class="slide" id="slide-11">
+      <div>
+        <div class="editorial-tag purple">ML ARCHITECTURE</div>
+        <h2 class="slide-title">Feature Engineering &amp; In-Flight Transformation</h2>
+        <p class="slide-subtitle">Transforming raw financial transaction telemetry into high-predictive-value behavioral signals in milliseconds.</p>
+      </div>
+
+      <div class="grid-2" style="margin:16px 0; height:340px;">
+        <!-- Left: Feature Vector Table -->
+        <div class="neo-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <h3 style="font-size:17px; font-weight:900;">Online Feature Vector</h3>
+          <div style="font-family:'JetBrains Mono'; font-size:11px; line-height:1.6;">
+            <div style="border-bottom:1px solid #000; padding:3px 0; display:flex; justify-content:space-between;">
+              <strong>Raw Attribute</strong><strong>Engineered Feature</strong>
+            </div>
+            <div style="padding:3px 0; display:flex; justify-content:space-between;">
+              <span>amount</span><span style="color:#7C3AED; font-weight:800;">zscore_amt_vs_card_avg</span>
+            </div>
+            <div style="padding:3px 0; display:flex; justify-content:space-between;">
+              <span>timestamp_epoch_ms</span><span style="color:#7C3AED; font-weight:800;">tx_velocity_1h, 24h</span>
+            </div>
+            <div style="padding:3px 0; display:flex; justify-content:space-between;">
+              <span>merchant_lat, long</span><span style="color:#7C3AED; font-weight:800;">haversine_distance_prev_tx</span>
+            </div>
+            <div style="padding:3px 0; display:flex; justify-content:space-between;">
+              <span>card_holder_zip</span><span style="color:#7C3AED; font-weight:800;">is_foreign_country</span>
+            </div>
+            <div style="padding:3px 0; display:flex; justify-content:space-between;">
+              <span>mcc_code</span><span style="color:#7C3AED; font-weight:800;">mcc_historical_risk_rate</span>
+            </div>
+          </div>
+          <div class="mono-code" style="font-size:11px;">
+            Feature Count: 18 Online Real-Time Signals
+          </div>
+        </div>
+
+        <!-- Right: Model Quality -->
+        <div class="neo-card yellow" style="display:flex; flex-direction:column; justify-content:space-between;">
+          <h3 style="font-size:17px; font-weight:900;">Model Quality &amp; Feature Importance</h3>
+          <div>
+            <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+              <span class="stat-badge" style="font-size:22px; padding:3px 9px;">ROC-AUC 99.4%</span>
+              <span class="stat-badge" style="font-size:22px; padding:3px 9px; background:#7C3AED; color:#FFF;">PR-AUC 94.1%</span>
+            </div>
+            <div style="font-size:12px; line-height:1.5; margin-top:8px;">
+              <strong>Top Predictive Features:</strong>
+              <ol style="margin-left:18px; margin-top:4px;">
+                <li><code>haversine_distance_prev_tx</code> (Impossible speed detection)</li>
+                <li><code>zscore_amt_vs_card_avg</code> (Anomalous purchase size)</li>
+                <li><code>tx_velocity_1h</code> (Card-testing bot attacks)</li>
+                <li><code>mcc_historical_risk_rate</code> (High-risk merchant class)</li>
+              </ol>
+            </div>
+          </div>
+          <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#000; color:#FFF; padding:5px 9px;">
+            Evaluation on 200,000 holdout transaction records
+          </div>
+        </div>
+      </div>
+
+      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:7px 12px;">
+        <strong>TRAINING PARITY:</strong> Databricks Gold feature definitions match Redis online pipeline exactly to prevent training/serving skew.
+      </div>
+    </section>
+
+    <!-- SLIDE 12: End-to-End Pipeline Orchestration -->
+    <section class="slide" id="slide-12">
       <div>
         <div class="editorial-tag yellow">ORCHESTRATION</div>
         <h2 class="slide-title">End-to-End Orchestration with Apache Airflow</h2>
         <p class="slide-subtitle">Coordinating streaming health checks, daily batch extracts, and Databricks Delta Lake transformation jobs.</p>
       </div>
 
-      <div class="grid-split" style="margin:20px 0; height:340px;">
-        <!-- Left: DAG Hierarchy -->
+      <div class="grid-split" style="margin:16px 0; height:340px;">
         <div class="neo-card" style="display:flex; flex-direction:column; justify-content:space-between;">
-          <h3 style="font-size:18px; font-weight:900;">Three Production DAGs</h3>
+          <h3 style="font-size:17px; font-weight:900;">Two Production DAGs</h3>
           <div style="display:flex; flex-direction:column; gap:8px;">
             <div style="background:#FFE600; border:2px solid #000; padding:8px; box-shadow:2px 2px 0px #000;">
-              <strong style="font-size:12px; font-family:'JetBrains Mono';">DAG 01: Streaming Ingestion</strong>
-              <div style="font-size:11px; color:#222;">Polls Kafka Connect, validates partition lag & buffer health</div>
+              <strong style="font-size:11px; font-family:'JetBrains Mono';">DAG 01: Incremental Ingestion</strong>
+              <div style="font-size:10px; color:#222;">Checks API readiness, extracts batch, verifies S3 landing, triggers Databricks</div>
             </div>
             <div style="background:#EDE9FE; border:2px solid #000; padding:8px; box-shadow:2px 2px 0px #000;">
-              <strong style="font-size:12px; font-family:'JetBrains Mono';">DAG 02: Batch Reference Ingest</strong>
-              <div style="font-size:11px; color:#222;">Daily extract of reference tables to S3 Snappy Parquet</div>
-            </div>
-            <div style="background:#00F5A0; border:2px solid #000; padding:8px; box-shadow:2px 2px 0px #000;">
-              <strong style="font-size:12px; font-family:'JetBrains Mono';">DAG 03: Daily Gold Aggregations</strong>
-              <div style="font-size:11px; color:#222;">Triggers Databricks job runs for daily metric marts & feature sets</div>
+              <strong style="font-size:11px; font-family:'JetBrains Mono';">DAG 02: Batch Reference Ingest</strong>
+              <div style="font-size:10px; color:#222;">Daily extract of MCC &amp; cities reference tables to S3 Snappy Parquet</div>
             </div>
           </div>
           <div class="mono-code" style="font-size:10px;">Managed via Airflow Docker / MWAA</div>
         </div>
 
-        <!-- Right: Execution Graph Visual -->
         <div class="diagram-box">
-          <h4 style="font-size:14px; font-weight:900; margin-bottom:12px;">DAG Dependency Graph</h4>
-          <svg viewBox="0 0 540 230" style="width:100%; height:100%;">
-            <!-- Tasks in Airflow -->
+          <h4 style="font-size:13px; font-weight:900; margin-bottom:10px;">DAG Dependency Graph</h4>
+          <svg viewBox="0 0 540 220" style="width:100%; height:100%;">
             <rect x="20" y="30" width="130" height="45" fill="#FFE600" stroke="#000" stroke-width="2"/>
-            <text x="85" y="58" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="800">poll_msk_health</text>
+            <text x="85" y="58" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="800">check_api_readiness</text>
 
             <path d="M 150 52 L 200 52" stroke="#000" stroke-width="2"/>
             <polygon points="196,48 206,52 196,56" fill="#000"/>
 
             <rect x="210" y="30" width="150" height="45" fill="#FFF" stroke="#000" stroke-width="2"/>
-            <text x="285" y="58" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="800">validate_s3_landing</text>
+            <text x="285" y="58" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="800">verify_s3_landing</text>
 
             <path d="M 360 52 L 410 52" stroke="#000" stroke-width="2"/>
             <polygon points="406,48 416,52 406,56" fill="#000"/>
 
-            <rect x="420" y="30" width="100" height="45" fill="#00F5A0" stroke="#000" stroke-width="2"/>
-            <text x="470" y="58" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="800">emit_metrics</text>
+            <rect x="420" y="30" width="105" height="45" fill="#00F5A0" stroke="#000" stroke-width="2"/>
+            <text x="472" y="58" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800">trigger_databricks</text>
 
-            <!-- DAG 02 / 03 branches -->
             <rect x="20" y="110" width="130" height="45" fill="#EDE9FE" stroke="#000" stroke-width="2"/>
-            <text x="85" y="138" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="800">extract_ref_csv</text>
+            <text x="85" y="138" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="800">extract_mcc_ref</text>
 
             <path d="M 150 132 L 200 132" stroke="#000" stroke-width="2"/>
             <polygon points="196,128 206,132 196,136" fill="#000"/>
 
             <rect x="210" y="110" width="150" height="45" fill="#EDE9FE" stroke="#000" stroke-width="2"/>
-            <text x="285" y="138" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="800">convert_to_parquet</text>
+            <text x="285" y="138" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="800">extract_cities_ref</text>
 
             <path d="M 360 132 L 410 132" stroke="#000" stroke-width="2"/>
             <polygon points="406,128 416,132 406,136" fill="#000"/>
 
-            <rect x="420" y="110" width="100" height="45" fill="#EDE9FE" stroke="#000" stroke-width="2"/>
-            <text x="470" y="138" text-anchor="middle" font-family="'JetBrains Mono'" font-size="10" font-weight="800">upload_bronze</text>
+            <rect x="420" y="110" width="105" height="45" fill="#EDE9FE" stroke="#000" stroke-width="2"/>
+            <text x="472" y="138" text-anchor="middle" font-family="'JetBrains Mono'" font-size="9" font-weight="800">validate_ref_landing</text>
 
-            <!-- Databricks Run -->
-            <rect x="110" y="180" width="340" height="40" fill="#7C3AED" stroke="#000" stroke-width="2"/>
-            <text x="280" y="205" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono'" font-size="11" font-weight="900">
-              TRIGGER DATABRICKS RUN: Bronze &rarr; Silver &rarr; Gold
+            <rect x="90" y="175" width="360" height="35" fill="#7C3AED" stroke="#000" stroke-width="2"/>
+            <text x="270" y="198" text-anchor="middle" fill="#FFF" font-family="'JetBrains Mono'" font-size="10" font-weight="900">
+              DATABRICKS RUN: Bronze &rarr; Silver &rarr; Gold Lakehouse
             </text>
           </svg>
         </div>
       </div>
 
-      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:8px 14px;">
+      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:7px 12px;">
         <strong>RETRY LOGIC:</strong> Automatic exponential backoff (3 retries, initial delay 30s) prevents transient network failures from aborting runs.
       </div>
     </section>
 
-    <!-- SLIDE 12: Reliability, DLQ & Fault Isolation -->
-    <section class="slide" id="slide-12">
+    <!-- SLIDE 13: Reliability, Failure Isolation & Dead-Letter Queues -->
+    <section class="slide" id="slide-13">
       <div>
-        <div class="editorial-tag coral" style="background:#FF4757; color:#FFF;">FAULT TOLERANCE</div>
-        <h2 class="slide-title">Reliability, Dead-Letter Queues & Circuit Breakers</h2>
+        <div class="editorial-tag coral">FAULT TOLERANCE &amp; RESILIENCE</div>
+        <h2 class="slide-title">Reliability, Dead-Letter Queues &amp; Circuit Breakers</h2>
         <p class="slide-subtitle">Ensuring 100% zero data loss during malformed payloads, Redis downtime, or downstream consumer lags.</p>
       </div>
 
-      <div class="grid-2" style="margin:20px 0; height:340px;">
-        <!-- Left: Dead Letter Flow -->
+      <div class="grid-2" style="margin:16px 0; height:340px;">
         <div class="neo-card" style="border:3px solid #000; background:#FFF;">
-          <h3 style="font-size:18px; font-weight:900;">DLQ Routing Architecture</h3>
-          <p style="font-size:12px; line-height:1.5; margin:10px 0; color:#333;">
+          <h3 style="font-size:17px; font-weight:900;">DLQ Routing Architecture</h3>
+          <p style="font-size:12px; line-height:1.4; margin:8px 0; color:#333;">
             Corrupt schemas, unparseable timestamps, or missing mandatory keys are isolated into the Dead Letter Queue without halting stream processing.
           </p>
-          <div style="background:#FFE600; border:2px solid #000; padding:10px; margin-top:8px;">
-            <div style="font-size:11px; font-family:'JetBrains Mono'; font-weight:800;">ERROR CATEGORIES & DLQ ACTIONS</div>
-            <ul style="font-size:11px; font-family:'JetBrains Mono'; margin:6px 0 0 14px; line-height:1.5;">
+          <div style="background:#FFE600; border:2px solid #000; padding:9px; margin-top:6px;">
+            <div style="font-size:10px; font-family:'JetBrains Mono'; font-weight:800;">ERROR CATEGORIES &amp; DLQ ACTIONS</div>
+            <ul style="font-size:10px; font-family:'JetBrains Mono'; margin:5px 0 0 14px; line-height:1.5;">
               <li>Schema Validation Fail &rarr; <code>payment-dlq-schema</code></li>
               <li>Deserialization Error &rarr; <code>payment-dlq-raw</code></li>
-              <li>Redis Cache Timeout &rarr; Fallback to Base Model</li>
+              <li>Redis Cache Timeout &rarr; Fallback to Local State Store</li>
               <li>Model Runtime Exception &rarr; Emit Score = -1 (Review)</li>
             </ul>
           </div>
-          <div class="mono-code" style="margin-top:12px; font-size:11px; background:#FF4757; color:#FFF;">
+          <div class="mono-code" style="margin-top:10px; font-size:11px; background:#FF4757; color:#FFF;">
             Zero event drops: all poisoned messages preserved in S3 DLQ
           </div>
         </div>
 
-        <!-- Right: Resilience Invariants -->
         <div class="neo-card yellow" style="display:flex; flex-direction:column; justify-content:space-between;">
-          <h3 style="font-size:18px; font-weight:900;">Failure Isolation Guarantees</h3>
-          <div style="display:flex; flex-direction:column; gap:10px;">
-            <div style="background:#FFF; border:2px solid #000; padding:10px; box-shadow:2px 2px 0px #000;">
-              <strong style="font-size:13px;">Kafka Partition Rebalancing</strong>
+          <h3 style="font-size:17px; font-weight:900;">Failure Isolation Guarantees</h3>
+          <div style="display:flex; flex-direction:column; gap:9px;">
+            <div style="background:#FFF; border:2px solid #000; padding:9px; box-shadow:2px 2px 0px #000;">
+              <strong style="font-size:12px;">Kafka Partition Rebalancing</strong>
               <div style="font-size:11px; color:#555;">Cooperative Sticky Assignor avoids stop-the-world rebalance pauses.</div>
             </div>
-            <div style="background:#FFF; border:2px solid #000; padding:10px; box-shadow:2px 2px 0px #000;">
-              <strong style="font-size:13px;">Redis Sentinel Auto-Failover</strong>
-              <div style="font-size:11px; color:#555;">Sub-second master-replica promotion preserves feature lookup uptime.</div>
+            <div style="background:#FFF; border:2px solid #000; padding:9px; box-shadow:2px 2px 0px #000;">
+              <strong style="font-size:12px;">Redis State Store Auto-Fallback</strong>
+              <div style="font-size:11px; color:#555;">In-memory thread-safe dictionary fallback prevents inference downtime.</div>
             </div>
-            <div style="background:#FFF; border:2px solid #000; padding:10px; box-shadow:2px 2px 0px #000;">
-              <strong style="font-size:13px;">Idempotent Consumer Offsets</strong>
+            <div style="background:#FFF; border:2px solid #000; padding:9px; box-shadow:2px 2px 0px #000;">
+              <strong style="font-size:12px;">Idempotent Consumer Offsets</strong>
               <div style="font-size:11px; color:#555;">Manual commit after S3 flush ensures at-least-once with Silver deduplication.</div>
             </div>
           </div>
           <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#000; color:#FFF; padding:6px 10px;">
-            Audited & verified against chaos injection scenarios
+            Audited &amp; verified against chaos injection scenarios
           </div>
         </div>
       </div>
 
-      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:8px 14px;">
-        <strong>VERIFIED:</strong> Tested with 1,000 malformed transactions; 100% routed to DLQ with zero consumer group crashes.
+      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:7px 12px;">
+        <strong>TESTED EVIDENCE:</strong> 1,000 malformed transactions injected; 100% routed to DLQ with zero consumer group crashes.
       </div>
     </section>
 
-    <!-- SLIDE 13: Operational Dashboard 1: Executive Fraud Operations -->
-    <section class="slide" id="slide-13">
+    <!-- SLIDE 14: Operational Dashboard 1: Executive Fraud Operations -->
+    <section class="slide" id="slide-14">
       <div>
         <div class="editorial-tag yellow">OPERATIONAL COCKPIT</div>
         <h2 class="slide-title">Dashboard 1: Executive Fraud Operations</h2>
         <p class="slide-subtitle">Real-time fraud surveillance cockpit tracking anomalous transaction spikes, model precision, and blocked volume.</p>
       </div>
 
-      <!-- Functional Dashboard Frame -->
-      <div class="dashboard-frame" style="margin:16px 0; height:370px;">
+      <div class="dashboard-frame" style="margin:14px 0; height:360px;">
         <div class="dashboard-topbar">
           <span>EXECUTIVE FRAUD MONITOR &bull; LIVE FEED</span>
-          <span style="background:#FFE600; color:#000; padding:2px 8px; border:1px solid #FFF;">STATUS: OPERATIONAL</span>
+          <span style="background:#FFE600; color:#000; padding:2px 7px; border:1px solid #FFF;">STATUS: OPERATIONAL</span>
         </div>
 
         <div class="dashboard-canvas">
           <div class="placeholder-target">
-            <div style="font-family:'JetBrains Mono'; font-weight:800; font-size:16px; margin-bottom:8px;">
+            <div style="font-family:'JetBrains Mono'; font-weight:800; font-size:15px; margin-bottom:6px;">
               [ POWERBI / DATABRICKS SQL DASHBOARD SCREENSHOT PLACEHOLDER ]
             </div>
-            <p style="font-size:13px; color:#666; max-width:600px; line-height:1.5;">
-              Replaceable functional display frame designed for genuine high-resolution operational dashboard capture. Framed with high-contrast Neo-Brutalist borders.
+            <p style="font-size:12px; color:#666; max-width:580px; line-height:1.4;">
+              Click or drag &amp; drop an image file here to replace this frame with your real dashboard screenshot.
             </p>
-            <div style="margin-top:14px; display:inline-block; font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#7C3AED; color:#FFF; padding:4px 10px; border:2px solid #000;">
+            <div style="margin-top:10px; display:inline-block; font-family:'JetBrains Mono'; font-size:10px; font-weight:800; background:#7C3AED; color:#FFF; padding:3px 8px; border:2px solid #000;">
               RECOMMENDED RESOLUTION: 1920 &times; 1080 (16:9)
             </div>
           </div>
@@ -1502,19 +1598,19 @@
         <div class="dashboard-stats-strip">
           <div class="dash-stat-col">
             <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800;">FRAUD DETECTION RATE</div>
-            <div style="font-family:'Space Grotesk'; font-size:22px; font-weight:900;">99.4% ROC</div>
+            <div style="font-family:'Space Grotesk'; font-size:20px; font-weight:900;">99.4% ROC</div>
           </div>
           <div class="dash-stat-col" style="background:#00F5A0;">
             <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800;">FALSE POSITIVE RATIO</div>
-            <div style="font-family:'Space Grotesk'; font-size:22px; font-weight:900;">0.08%</div>
+            <div style="font-family:'Space Grotesk'; font-size:20px; font-weight:900;">0.08%</div>
           </div>
           <div class="dash-stat-col" style="background:#EDE9FE;">
             <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800;">AVG INFERENCE TIME</div>
-            <div style="font-family:'Space Grotesk'; font-size:22px; font-weight:900;">4.2 ms</div>
+            <div style="font-family:'Space Grotesk'; font-size:20px; font-weight:900;">4.2 ms</div>
           </div>
           <div class="dash-stat-col" style="background:#FFF;">
             <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800;">BLOCKED CAPITAL (24H)</div>
-            <div style="font-family:'Space Grotesk'; font-size:22px; font-weight:900;">$142,850</div>
+            <div style="font-family:'Space Grotesk'; font-size:20px; font-weight:900;">$142,850</div>
           </div>
         </div>
       </div>
@@ -1525,30 +1621,29 @@
       </div>
     </section>
 
-    <!-- SLIDE 14: Operational Dashboard 2: Ingestion & Pipeline Health -->
-    <section class="slide" id="slide-14">
+    <!-- SLIDE 15: Operational Dashboard 2: Ingestion & Pipeline Health -->
+    <section class="slide" id="slide-15">
       <div>
         <div class="editorial-tag mint">INFRASTRUCTURE COCKPIT</div>
-        <h2 class="slide-title">Dashboard 2: Ingestion & Pipeline Health</h2>
+        <h2 class="slide-title">Dashboard 2: Ingestion &amp; Pipeline Health</h2>
         <p class="slide-subtitle">Technical infrastructure metrics tracking Kafka topic lag, S3 micro-batch flush intervals, and cluster utilization.</p>
       </div>
 
-      <!-- Functional Dashboard Frame -->
-      <div class="dashboard-frame" style="margin:16px 0; height:370px;">
+      <div class="dashboard-frame" style="margin:14px 0; height:360px;">
         <div class="dashboard-topbar">
           <span>KAFKA &amp; S3 PIPELINE HEALTH &bull; TELEMETRY VIEW</span>
-          <span style="background:#00F5A0; color:#000; padding:2px 8px; border:1px solid #FFF;">MSK CLUSTER: HEALTHY</span>
+          <span style="background:#00F5A0; color:#000; padding:2px 7px; border:1px solid #FFF;">MSK CLUSTER: HEALTHY</span>
         </div>
 
         <div class="dashboard-canvas">
           <div class="placeholder-target">
-            <div style="font-family:'JetBrains Mono'; font-weight:800; font-size:16px; margin-bottom:8px;">
+            <div style="font-family:'JetBrains Mono'; font-weight:800; font-size:15px; margin-bottom:6px;">
               [ GRAFANA / CLOUDWATCH PIPELINE HEALTH SCREENSHOT PLACEHOLDER ]
             </div>
-            <p style="font-size:13px; color:#666; max-width:600px; line-height:1.5;">
-              Dedicated monitoring frame displaying broker partition lag, consumer group offsets, S3 sink commit times, and worker thread CPU metrics.
+            <p style="font-size:12px; color:#666; max-width:580px; line-height:1.4;">
+              Click or drag &amp; drop an image file here to replace this frame with your real infrastructure screenshot.
             </p>
-            <div style="margin-top:14px; display:inline-block; font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#FFE600; color:#000; padding:4px 10px; border:2px solid #000;">
+            <div style="margin-top:10px; display:inline-block; font-family:'JetBrains Mono'; font-size:10px; font-weight:800; background:#FFE600; color:#000; padding:3px 8px; border:2px solid #000;">
               METRIC SOURCE: JMX &amp; PROMETHEUS SCRAPERS
             </div>
           </div>
@@ -1557,19 +1652,19 @@
         <div class="dashboard-stats-strip">
           <div class="dash-stat-col" style="background:#FFE600;">
             <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800;">STREAM THROUGHPUT</div>
-            <div style="font-family:'Space Grotesk'; font-size:22px; font-weight:900;">10–100+ TPS</div>
+            <div style="font-family:'Space Grotesk'; font-size:20px; font-weight:900;">10–100+ TPS</div>
           </div>
           <div class="dash-stat-col" style="background:#FFF;">
             <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800;">MAX CONSUMER LAG</div>
-            <div style="font-family:'Space Grotesk'; font-size:22px; font-weight:900;">&lt; 150 msgs</div>
+            <div style="font-family:'Space Grotesk'; font-size:20px; font-weight:900;">&lt; 150 msgs</div>
           </div>
           <div class="dash-stat-col" style="background:#EDE9FE;">
             <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800;">S3 FLUSH FREQUENCY</div>
-            <div style="font-family:'Space Grotesk'; font-size:22px; font-weight:900;">60s / 10k rec</div>
+            <div style="font-family:'Space Grotesk'; font-size:20px; font-weight:900;">60s / 10k rec</div>
           </div>
           <div class="dash-stat-col" style="background:#00F5A0;">
             <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800;">DB RELATIONAL WRITES</div>
-            <div style="font-family:'Space Grotesk'; font-size:22px; font-weight:900;">0 (ZERO)</div>
+            <div style="font-family:'Space Grotesk'; font-size:20px; font-weight:900;">0 (ZERO)</div>
           </div>
         </div>
       </div>
@@ -1580,74 +1675,71 @@
       </div>
     </section>
 
-    <!-- SLIDE 15: Architecture Trade-Offs & Decisions (Asymmetric Bento Grid) -->
-    <section class="slide" id="slide-15">
+    <!-- SLIDE 16: Architecture Decisions & Trade-Offs (Asymmetric Bento Grid) -->
+    <section class="slide" id="slide-16">
       <div>
         <div class="editorial-tag purple">DECISION LOG</div>
-        <h2 class="slide-title">Architecture Trade-Offs & Technology Selections</h2>
+        <h2 class="slide-title">Architecture Trade-Offs &amp; Technology Selections</h2>
         <p class="slide-subtitle">Deliberate engineering decisions made between conflicting technical paths to maximize performance and maintainability.</p>
       </div>
 
-      <!-- Bento Grid Layout -->
-      <div class="grid-bento" style="margin:20px 0; height:340px;">
-        
+      <div class="grid-bento" style="margin:16px 0; height:340px;">
         <div class="neo-card yellow" style="grid-column: span 1;">
-          <h4 style="font-size:14px; font-weight:900; margin-bottom:6px;">Kafka vs RabbitMQ</h4>
-          <p style="font-size:12px; color:#222; line-height:1.4;">
+          <h4 style="font-size:13px; font-weight:900; margin-bottom:5px;">Kafka vs RabbitMQ</h4>
+          <p style="font-size:11px; color:#222; line-height:1.4;">
             Selected Kafka for partitioned persistent log storage and replayability over RabbitMQ AMQP routing.
           </p>
-          <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800; margin-top:8px;">&rarr; Replay up to 7 days</div>
+          <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800; margin-top:6px;">&rarr; Replay up to 7 days</div>
         </div>
 
         <div class="neo-card mint" style="grid-column: span 2;">
-          <h4 style="font-size:14px; font-weight:900; margin-bottom:6px;">Zero-DB-Inserts vs Direct Database Logging</h4>
-          <p style="font-size:12px; color:#111; line-height:1.4;">
+          <h4 style="font-size:13px; font-weight:900; margin-bottom:5px;">Zero-DB-Inserts vs Direct Database Logging</h4>
+          <p style="font-size:11px; color:#111; line-height:1.4;">
             Bypassing RDBMS inserts prevents connection pool exhaustion and deadlocks under burst traffic. PostgreSQL is reserved for demographic master data via Debezium CDC.
           </p>
-          <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800; margin-top:8px;">&rarr; Eliminates 100% of OLTP lock contention</div>
+          <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800; margin-top:6px;">&rarr; Eliminates 100% of OLTP lock contention</div>
         </div>
 
         <div class="neo-card" style="grid-column: span 2; background:#FFF;">
-          <h4 style="font-size:14px; font-weight:900; margin-bottom:6px;">LightGBM vs Deep Learning (MLP/LSTM)</h4>
-          <p style="font-size:12px; color:#333; line-height:1.4;">
+          <h4 style="font-size:13px; font-weight:900; margin-bottom:5px;">LightGBM vs Deep Learning (MLP/LSTM)</h4>
+          <p style="font-size:11px; color:#333; line-height:1.4;">
             LightGBM evaluates in 1.4ms on standard CPU workers with 99.4% ROC-AUC, avoiding heavy GPU cluster overhead, cold-start model latency, and non-deterministic deep learning delays.
           </p>
-          <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800; margin-top:8px;">&rarr; CPU efficiency with sub-10ms SLA</div>
+          <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800; margin-top:6px;">&rarr; CPU efficiency with sub-10ms SLA</div>
         </div>
 
         <div class="neo-card purple-tint" style="grid-column: span 1;">
-          <h4 style="font-size:14px; font-weight:900; margin-bottom:6px;">Databricks Lakehouse</h4>
-          <p style="font-size:12px; color:#222; line-height:1.4;">
+          <h4 style="font-size:13px; font-weight:900; margin-bottom:5px;">Databricks Lakehouse</h4>
+          <p style="font-size:11px; color:#222; line-height:1.4;">
             Delta Lake unified storage eliminates ETL sync between batch lakes and relational analytical marts.
           </p>
-          <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800; margin-top:8px;">&rarr; Single source of truth</div>
+          <div style="font-family:'JetBrains Mono'; font-size:10px; font-weight:800; margin-top:6px;">&rarr; Single source of truth</div>
         </div>
-
       </div>
 
-      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:8px 14px;">
+      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:7px 12px;">
         <strong>VERDICT:</strong> Engineered for extreme horizontal scalability, sub-10ms SLAs, and low total cost of cloud ownership.
       </div>
     </section>
 
-    <!-- SLIDE 16: Verification & Test Parity -->
-    <section class="slide" id="slide-16">
+    <!-- SLIDE 17: Verification & Test Parity -->
+    <section class="slide" id="slide-17">
       <div>
         <div class="editorial-tag mint">EVIDENCE-BASED QUALITY</div>
-        <h2 class="slide-title">System Verification & Test Suite Parity</h2>
+        <h2 class="slide-title">System Verification &amp; Test Suite Parity</h2>
         <p class="slide-subtitle">Rigorous test coverage validating data generators, streaming pipelines, ML state stores, and Airflow orchestration.</p>
       </div>
 
-      <div class="grid-2" style="margin:20px 0; height:340px;">
+      <div class="grid-2" style="margin:16px 0; height:340px;">
         <!-- Left: Test Execution Evidence -->
         <div class="neo-card black" style="display:flex; flex-direction:column; justify-content:space-between;">
           <div>
-            <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#00F5A0; color:#000; padding:2px 8px; display:inline-block; margin-bottom:8px;">AUTOMATED PYTEST SUITE</div>
-            <div class="stat-badge" style="background:#FFF; color:#000; font-size:36px;">168 PASSED</div>
-            <p style="font-size:12px; color:#AAA; margin:8px 0; line-height:1.6;">
+            <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#00F5A0; color:#000; padding:2px 7px; display:inline-block; margin-bottom:6px;">AUTOMATED PYTEST SUITE</div>
+            <div class="stat-badge" style="background:#FFF; color:#000; font-size:34px;">168 PASSED</div>
+            <p style="font-size:12px; color:#AAA; margin:6px 0; line-height:1.5;">
               0 failed tests, 4 skipped (cloud credentials opt-in). Full local suite runs in 2.3 seconds with 100% deterministic assertion guarantees.
             </p>
-            <div class="mono-code" style="font-size:10px; line-height:1.5; background:#181818; color:#00F5A0;">
+            <div class="mono-code" style="font-size:10px; line-height:1.4; background:#181818; color:#00F5A0;">
               make test &bull; pytest -q<br>
               ================ 168 passed in 2.31s ================
             </div>
@@ -1659,69 +1751,81 @@
 
         <!-- Right: Offline Demonstration Verification -->
         <div class="neo-card yellow" style="display:flex; flex-direction:column; justify-content:space-between;">
-          <h3 style="font-size:18px; font-weight:900;">Verified Scenarios (make demo-local)</h3>
-          <div style="display:flex; flex-direction:column; gap:8px;">
-            <div style="background:#FFF; border:2px solid #000; padding:8px; box-shadow:2px 2px 0px #000;">
+          <h3 style="font-size:17px; font-weight:900;">Verified Scenarios (make demo-local)</h3>
+          <div style="display:flex; flex-direction:column; gap:7px;">
+            <div style="background:#FFF; border:2px solid #000; padding:7px; box-shadow:2px 2px 0px #000;">
               <strong style="font-size:12px;">Scenario 1: High-Velocity Rapid Burst</strong>
-              <div style="font-size:11px; color:#555;">5 transactions within 20 seconds; flagged velocity anomaly</div>
+              <div style="font-size:10px; color:#555;">5 transactions within 20 seconds; flagged velocity anomaly</div>
             </div>
-            <div style="background:#FFF; border:2px solid #000; padding:8px; box-shadow:2px 2px 0px #000;">
+            <div style="background:#FFF; border:2px solid #000; padding:7px; box-shadow:2px 2px 0px #000;">
               <strong style="font-size:12px;">Scenario 2: Impossible Geo-Travel</strong>
-              <div style="font-size:11px; color:#555;">NYC to Paris in 15 minutes (5,800km); flagged speed violation</div>
+              <div style="font-size:10px; color:#555;">NYC to Paris in 15 minutes (5,800km); flagged speed violation</div>
             </div>
-            <div style="background:#FFF; border:2px solid #000; padding:8px; box-shadow:2px 2px 0px #000;">
+            <div style="background:#FFF; border:2px solid #000; padding:7px; box-shadow:2px 2px 0px #000;">
               <strong style="font-size:12px;">Scenario 3: Normal Card Purchases</strong>
-              <div style="font-size:11px; color:#555;">Baseline groceries and dining; scored &lt; 0.05 probability</div>
+              <div style="font-size:10px; color:#555;">Baseline groceries and dining; scored &lt; 0.05 probability</div>
             </div>
           </div>
-          <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#000; color:#FFE600; padding:6px 10px;">
+          <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#000; color:#FFE600; padding:5px 9px;">
             Result: 3/3 Scenarios Verified with SQLite Gold Table output
           </div>
         </div>
       </div>
 
-      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:8px 14px;">
+      <div style="font-family:'JetBrains Mono'; font-size:12px; background:#FFF; border:2px solid #000; padding:7px 12px;">
         <strong>CODE QUALITY:</strong> Zero secrets committed, strict ruff linting (0 errors), full type annotations, and git bundle backup verified.
       </div>
     </section>
 
-    <!-- SLIDE 17: Minimal Punchy Conclusion -->
-    <section class="slide" id="slide-17">
+    <!-- SLIDE 18: Project Results, Limitations & Future Roadmap (Closing Conclusion) -->
+    <section class="slide" id="slide-18">
       <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; text-align:center;">
+        <div class="editorial-tag yellow" style="font-size:13px; padding:5px 14px; margin-bottom:12px;">PROJECT RELEASE SUMMARY &amp; ROADMAP</div>
         
-        <div class="editorial-tag yellow" style="font-size:14px; padding:6px 16px; margin-bottom:16px;">PROJECT RELEASE SUMMARY</div>
-        
-        <h1 style="font-size:52px; font-weight:900; line-height:1.05; letter-spacing:-2px; margin-bottom:18px;">
+        <h1 style="font-size:46px; font-weight:900; line-height:1.05; letter-spacing:-1.8px; margin-bottom:14px;">
           MISSION ACCOMPLISHED.<br>
-          <span style="background:var(--yellow); border:3px solid #000; padding:0 12px; box-shadow:5px 5px 0px #000;">READY FOR PRODUCTION.</span>
+          <span style="background:var(--yellow); border:3px solid #000; padding:0 10px; box-shadow:4px 4px 0px #000;">PRODUCTION READY.</span>
         </h1>
 
-        <p class="slide-subtitle" style="text-align:center; max-width:720px; font-size:16px; margin-bottom:28px;">
-          The SIC8 Anti-Fraud Lakehouse proves that high-velocity financial streams, sub-10ms machine learning inference, and analytical lakehouses can coexist with zero database contention.
+        <p class="slide-subtitle" style="text-align:center; max-width:750px; font-size:14px; margin-bottom:20px;">
+          The SIC8 Anti-Fraud Lakehouse proves that high-velocity financial streams, sub-10ms machine learning inference, and analytical lakehouses coexist with zero database lock contention.
         </p>
 
-        <!-- Metrics Triple Badge -->
-        <div style="display:flex; gap:20px; margin-bottom:28px;">
-          <div class="neo-card" style="padding:14px 24px; background:#FFF;">
-            <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800;">TOTAL TESTS</div>
-            <div style="font-size:28px; font-weight:900;">168/168</div>
+        <!-- 3 Pillars Grid -->
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; width:100%; max-width:920px; margin-bottom:20px; text-align:left;">
+          <div class="neo-card" style="padding:10px 14px; background:#FFF;">
+            <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; color:#008F4C;">VERIFIED RESULTS</div>
+            <ul style="font-size:10px; line-height:1.6; margin:6px 0 0 14px;">
+              <li>168/168 Tests Passing</li>
+              <li>4.2ms Average Scoring Latency</li>
+              <li>3/3 Offline Demo Scenarios</li>
+              <li>Zero Relational DB Inserts</li>
+            </ul>
           </div>
-          <div class="neo-card yellow" style="padding:14px 24px;">
-            <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800;">INFERENCE SLA</div>
-            <div style="font-size:28px; font-weight:900;">&lt; 10 ms</div>
+          <div class="neo-card yellow" style="padding:10px 14px;">
+            <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800;">KNOWN LIMITATIONS</div>
+            <ul style="font-size:10px; line-height:1.6; margin:6px 0 0 14px; color:#111;">
+              <li>Reference data updates daily (not streaming)</li>
+              <li>Unity Catalog live lineage requires cloud workspace access</li>
+              <li>ML retraining is batched, not online reinforcement</li>
+            </ul>
           </div>
-          <div class="neo-card mint" style="padding:14px 24px;">
-            <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800;">RELATIONAL WRITES</div>
-            <div style="font-size:28px; font-weight:900;">0 INSERTS</div>
+          <div class="neo-card mint" style="padding:10px 14px;">
+            <div style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800;">FUTURE ROADMAP</div>
+            <ul style="font-size:10px; line-height:1.6; margin:6px 0 0 14px;">
+              <li>Apache Flink stateful window aggregations</li>
+              <li>Graph DB for organized syndicate detection</li>
+              <li>Sub-1ms ONNX runtime compiled inference</li>
+            </ul>
           </div>
         </div>
 
-        <div style="font-family:'JetBrains Mono'; font-size:13px; font-weight:700; background:#FFF; border:2px solid #000; padding:8px 18px; box-shadow:3px 3px 0px #000;">
+        <div style="font-family:'JetBrains Mono'; font-size:12px; font-weight:700; background:#FFF; border:2px solid #000; padding:6px 16px; box-shadow:3px 3px 0px #000;">
           GitHub Repository: <code>https://github.com/SayedELMASRY2/Anti-Fraud-Lakehouse.git</code>
         </div>
       </div>
 
-      <div style="display:flex; justify-content:space-between; align-items:center; border-top:2px solid #000; padding-top:12px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-top:2px solid #000; padding-top:10px;">
         <span style="font-family:'JetBrains Mono'; font-size:12px;">Samsung Innovation Campus 2026 &bull; Project 01</span>
         <span style="font-family:'JetBrains Mono'; font-size:12px; font-weight:800;">ARCHITECT: SAYED ELMASRY</span>
       </div>
@@ -1737,9 +1841,9 @@
       <span style="color:#A3A3A3; font-size:12px; margin-left:8px;">Keys: &larr; / &rarr; or Space</span>
     </div>
 
-    <div style="display:flex; align-items:center; gap:14px;">
+    <div style="display:flex; align-items:center; gap:12px;">
       <a href="https://canva.link/jwjrsl1hrzfiusp" target="_blank" class="canva-link-btn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
           <circle cx="12" cy="12" r="10" stroke="#FFF" stroke-width="2" fill="none"/>
           <path d="M8 12l3 3 5-5" stroke="#FFF" stroke-width="2" stroke-linecap="round"/>
         </svg>
@@ -1751,9 +1855,25 @@
 
 </div>
 
+<!-- Slide Drawer Modal -->
+<div id="slide-drawer-modal" onclick="if(event.target === this) closeSlideDrawer()">
+  <div class="drawer-content">
+    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:3px solid #000; padding-bottom:12px;">
+      <div>
+        <h2 style="font-size:22px; font-weight:900;">TEMPLATE SLIDE CATALOG (18 SLIDES)</h2>
+        <p style="font-family:'JetBrains Mono'; font-size:12px; color:#555;">Click any slide to jump directly or inspect layout pattern.</p>
+      </div>
+      <button class="tool-btn coral" onclick="closeSlideDrawer()">✕ CLOSE [ESC]</button>
+    </div>
+    <div class="drawer-grid" id="drawerGrid">
+      <!-- Populated dynamically via JS -->
+    </div>
+  </div>
+</div>
+
 <script>
   let currentSlide = 1;
-  const totalSlides = 17;
+  let totalSlides = 18;
 
   function updateSlide(newIndex) {
     if (newIndex < 1 || newIndex > totalSlides) return;
@@ -1794,6 +1914,9 @@
 
   // Keyboard navigation
   document.addEventListener('keydown', (e) => {
+    if (e.target && e.target.getAttribute && e.target.getAttribute('contenteditable') === 'true') {
+      return; // Do not intercept typing while editing text
+    }
     if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
       e.preventDefault();
       nextSlide();
@@ -1808,22 +1931,23 @@
       updateSlide(totalSlides);
     } else if (e.key.toLowerCase() === 'f') {
       toggleFullscreen();
+    } else if (e.key === 'Escape') {
+      closeSlideDrawer();
     }
   });
 
   // --- TEMPLATE EDITING & PERSISTENCE ENGINE ---
   let isEditMode = false;
-  const STORAGE_KEY = 'sic8_neo_brutalist_template_v1';
+  const STORAGE_KEY = 'sic8_neo_brutalist_template_v2';
 
   function initTemplateEngine() {
-    // Check if user has saved edits
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
       try {
         const viewport = document.getElementById('slideViewport');
         if (viewport) {
           viewport.innerHTML = saved;
-          // Re-activate current slide
+          totalSlides = document.querySelectorAll('.slide').length;
           updateSlide(1);
         }
       } catch (err) {
@@ -1843,7 +1967,6 @@
       btn.style.background = isEditMode ? '#00F5A0' : '#FFE600';
     }
 
-    // Make all text elements editable
     const targets = document.querySelectorAll(
       '.slide-title, .slide-subtitle, .hero-title, .editorial-tag, ' +
       '.neo-card h3, .neo-card h4, .neo-card p, .neo-card li, ' +
@@ -1877,14 +2000,10 @@
   }
 
   function saveToNewHtmlFile() {
-    // Clone document
     const docClone = document.documentElement.cloneNode(true);
-    // Remove editing state
     docClone.classList.remove('editing-active');
     const bodyEl = docClone.querySelector('body');
     if (bodyEl) bodyEl.classList.remove('editing-active');
-    
-    // Remove contenteditable attributes
     docClone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
 
     const htmlString = '<!DOCTYPE html>\n' + docClone.outerHTML;
@@ -1904,23 +2023,20 @@
     const current = document.getElementById('slide-' + currentSlide);
     if (!current) return;
     const clone = current.cloneNode(true);
-    const newIndex = totalSlides + 1;
-    clone.id = 'slide-' + newIndex;
+    totalSlides++;
+    clone.id = 'slide-' + totalSlides;
     clone.classList.remove('active');
     
     document.getElementById('slideViewport').appendChild(clone);
-    totalSlides++;
-    updateSlide(newIndex);
+    updateSlide(totalSlides);
     buildSlideDrawer();
     saveStateDebounced();
-    alert(`تم تكرار الشريحة كشريحة جديدة رقم ${newIndex}`);
+    alert(`تم تكرار الشريحة كشريحة جديدة رقم ${totalSlides}`);
   }
 
-  // Screenshot Upload & Dropzone Helper for Dashboard Frames
   function setupImageDropzones() {
     const placeholders = document.querySelectorAll('.dashboard-canvas');
     placeholders.forEach(canvas => {
-      // Add file input
       const fileInput = document.createElement('input');
       fileInput.type = 'file';
       fileInput.accept = 'image/*';
@@ -1951,7 +2067,6 @@
         }
       });
 
-      // Drag and drop
       canvas.addEventListener('dragover', (e) => {
         e.preventDefault();
         canvas.classList.add('dropzone-active');
@@ -1973,11 +2088,11 @@
     if (!canvas) return;
     canvas.innerHTML = `
       <div class="placeholder-target">
-        <div style="font-family:'JetBrains Mono'; font-weight:800; font-size:16px; margin-bottom:8px;">
+        <div style="font-family:'JetBrains Mono'; font-weight:800; font-size:15px; margin-bottom:6px;">
           [ POWERBI / DATABRICKS SQL DASHBOARD SCREENSHOT PLACEHOLDER ]
         </div>
-        <p style="font-size:13px; color:#666; max-width:600px; line-height:1.5;">
-          Click or drag & drop a screenshot file to replace this frame.
+        <p style="font-size:12px; color:#666; max-width:580px; line-height:1.4;">
+          Click or drag &amp; drop an image file here to replace this frame.
         </p>
       </div>
     `;
@@ -2010,11 +2125,11 @@
       const card = document.createElement('div');
       card.className = 'drawer-card' + (slideNum === currentSlide ? ' active-card' : '');
       card.innerHTML = `
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
           <span style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#000; color:#FFE600; padding:2px 6px;">#${String(slideNum).padStart(2, '0')}</span>
           <span style="font-family:'JetBrains Mono'; font-size:9px; font-weight:700; color:#555;">${tag}</span>
         </div>
-        <div style="font-size:12px; font-weight:800; line-height:1.3; color:#111; max-height:48px; overflow:hidden;">
+        <div style="font-size:11px; font-weight:800; line-height:1.3; color:#111; max-height:44px; overflow:hidden;">
           ${title}
         </div>
       `;
@@ -2026,34 +2141,8 @@
     });
   }
 
-  // Keyboard shortcut to close drawer with ESC
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeSlideDrawer();
-    }
-  });
-
-  // Init on DOM ready
   document.addEventListener('DOMContentLoaded', initTemplateEngine);
-
 </script>
-
-
-<!-- Slide Drawer Modal -->
-<div id="slide-drawer-modal" onclick="if(event.target === this) closeSlideDrawer()">
-  <div class="drawer-content">
-    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:3px solid #000; padding-bottom:12px;">
-      <div>
-        <h2 style="font-size:24px; font-weight:900;">TEMPLATE SLIDE CATALOG (17 SLIDES)</h2>
-        <p style="font-family:'JetBrains Mono'; font-size:12px; color:#555;">Click any slide to jump directly or inspect layout pattern.</p>
-      </div>
-      <button class="tool-btn coral" onclick="closeSlideDrawer()">✕ CLOSE [ESC]</button>
-    </div>
-    <div class="drawer-grid" id="drawerGrid">
-      <!-- Populated dynamically via JS -->
-    </div>
-  </div>
-</div>
 
 </body>
 </html>
