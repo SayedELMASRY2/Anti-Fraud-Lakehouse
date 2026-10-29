@@ -457,6 +457,146 @@
     background: var(--yellow);
     box-shadow: 2px 2px 0px #000;
   }
+
+  /* --- TEMPLATE EDITING STUDIO STYLES --- */
+  .edit-ribbon {
+    display: none;
+    background: #FFE600;
+    color: #050505;
+    padding: 8px 24px;
+    border-bottom: var(--border-heavy);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 800;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+    box-shadow: 0 4px 0 #000;
+  }
+
+  body.editing-active .edit-ribbon {
+    display: flex;
+  }
+
+  body.editing-active [contenteditable="true"] {
+    outline: 2px dashed #7C3AED;
+    outline-offset: 2px;
+    cursor: text;
+    transition: background 0.15s;
+  }
+
+  body.editing-active [contenteditable="true"]:hover {
+    background: rgba(124, 58, 237, 0.08);
+  }
+
+  body.editing-active [contenteditable="true"]:focus {
+    outline: 3px solid #FFE600;
+    background: rgba(255, 230, 0, 0.2);
+    box-shadow: 0 0 0 2px #000;
+  }
+
+  .tool-btn {
+    background: #000;
+    color: #FFF;
+    border: 2px solid #000;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 5px 12px;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #FFF;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.1s;
+  }
+
+  .tool-btn:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0px #FFF;
+  }
+
+  .tool-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px #FFF;
+  }
+
+  .tool-btn.yellow {
+    background: #FFE600;
+    color: #000;
+    box-shadow: 2px 2px 0px #000;
+  }
+
+  .tool-btn.mint {
+    background: #00F5A0;
+    color: #000;
+    box-shadow: 2px 2px 0px #000;
+  }
+
+  .tool-btn.purple {
+    background: #7C3AED;
+    color: #FFF;
+    box-shadow: 2px 2px 0px #000;
+  }
+
+  .tool-btn.coral {
+    background: #FF4757;
+    color: #FFF;
+    box-shadow: 2px 2px 0px #000;
+  }
+
+  /* Slide Drawer Modal */
+  #slide-drawer-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    padding: 40px;
+    overflow-y: auto;
+  }
+
+  .drawer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--bg-cream);
+    border: var(--border-heavy);
+    box-shadow: 10px 10px 0px #FFE600;
+    padding: 24px;
+  }
+
+  .drawer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .drawer-card {
+    background: #FFF;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0px #000;
+    padding: 12px;
+    cursor: pointer;
+    transition: transform 0.15s, background 0.15s;
+  }
+
+  .drawer-card:hover {
+    background: #FFFDF0;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #7C3AED;
+  }
+
+  .drawer-card.active-card {
+    border-color: #7C3AED;
+    background: #EDE9FE;
+  }
+
+  .dropzone-active {
+    border-color: #00F5A0 !important;
+    background: rgba(0, 245, 160, 0.15) !important;
+  }
+
 </style>
 </head>
 <body>
@@ -472,9 +612,28 @@
     </div>
     <div style="display:flex; align-items:center; gap:12px;">
       <span style="color:#FFE600;">LIVE CANVA SYNCED</span>
+      
+      <button class="tool-btn yellow" id="editToggleBtn" onclick="toggleEditMode()" style="font-size:11px; padding:3px 10px;">✏️ EDIT TEMPLATE</button>
+      <button class="tool-btn purple" onclick="openSlideDrawer()" style="font-size:11px; padding:3px 10px;">📑 SLIDES (17)</button>
+
       <span class="counter" id="slideCounter">SLIDE 01 / 17</span>
     </div>
   </header>
+
+  <!-- Template Editing Studio Ribbon -->
+  <div class="edit-ribbon" id="editRibbon">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <span style="background:#000; color:#FFE600; padding:2px 8px; border:2px solid #000;">✏️ TEMPLATE EDIT MODE ACTIVE</span>
+      <span>Click any text, header, or badge to edit directly.</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <button class="tool-btn mint" onclick="saveToNewHtmlFile()">💾 DOWNLOAD EDITED HTML</button>
+      <button class="tool-btn purple" onclick="openSlideDrawer()">📑 SLIDE GRID</button>
+      <button class="tool-btn yellow" onclick="duplicateCurrentSlide()">📋 DUPLICATE SLIDE</button>
+      <button class="tool-btn coral" onclick="resetToTemplate()">🔄 RESET TEMPLATE</button>
+    </div>
+  </div>
+
 
   <!-- Slide Viewport -->
   <main class="slide-viewport" id="slideViewport">
@@ -1651,7 +1810,250 @@
       toggleFullscreen();
     }
   });
+
+  // --- TEMPLATE EDITING & PERSISTENCE ENGINE ---
+  let isEditMode = false;
+  const STORAGE_KEY = 'sic8_neo_brutalist_template_v1';
+
+  function initTemplateEngine() {
+    // Check if user has saved edits
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      try {
+        const viewport = document.getElementById('slideViewport');
+        if (viewport) {
+          viewport.innerHTML = saved;
+          // Re-activate current slide
+          updateSlide(1);
+        }
+      } catch (err) {
+        console.warn('Could not restore saved template:', err);
+      }
+    }
+    setupImageDropzones();
+    buildSlideDrawer();
+  }
+
+  function toggleEditMode() {
+    isEditMode = !isEditMode;
+    document.body.classList.toggle('editing-active', isEditMode);
+    const btn = document.getElementById('editToggleBtn');
+    if (btn) {
+      btn.innerHTML = isEditMode ? '✓ DONE EDITING' : '✏️ EDIT TEMPLATE';
+      btn.style.background = isEditMode ? '#00F5A0' : '#FFE600';
+    }
+
+    // Make all text elements editable
+    const targets = document.querySelectorAll(
+      '.slide-title, .slide-subtitle, .hero-title, .editorial-tag, ' +
+      '.neo-card h3, .neo-card h4, .neo-card p, .neo-card li, ' +
+      '.stat-badge, .mono-code, .tag-item, text, .dash-stat-col div'
+    );
+
+    targets.forEach(el => {
+      el.setAttribute('contenteditable', isEditMode ? 'true' : 'false');
+      if (isEditMode) {
+        el.oninput = saveStateDebounced;
+      }
+    });
+  }
+
+  let saveTimer = null;
+  function saveStateDebounced() {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => {
+      const viewport = document.getElementById('slideViewport');
+      if (viewport) {
+        localStorage.setItem(STORAGE_KEY, viewport.innerHTML);
+      }
+    }, 600);
+  }
+
+  function resetToTemplate() {
+    if (confirm('هل أنت متأكد من استعادة القالب الأصلي؟ سيتم مسح أي تعديلات غير محفوظة.')) {
+      localStorage.removeItem(STORAGE_KEY);
+      location.reload();
+    }
+  }
+
+  function saveToNewHtmlFile() {
+    // Clone document
+    const docClone = document.documentElement.cloneNode(true);
+    // Remove editing state
+    docClone.classList.remove('editing-active');
+    const bodyEl = docClone.querySelector('body');
+    if (bodyEl) bodyEl.classList.remove('editing-active');
+    
+    // Remove contenteditable attributes
+    docClone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+
+    const htmlString = '<!DOCTYPE html>\n' + docClone.outerHTML;
+    const blob = new Blob([htmlString], { type: 'text/html;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'SIC8_Custom_Presentation.html';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    alert('تم حفظ وتنزيل ملف العرض التقديمي المعدل بنجاح! 🎉');
+  }
+
+  function duplicateCurrentSlide() {
+    const current = document.getElementById('slide-' + currentSlide);
+    if (!current) return;
+    const clone = current.cloneNode(true);
+    const newIndex = totalSlides + 1;
+    clone.id = 'slide-' + newIndex;
+    clone.classList.remove('active');
+    
+    document.getElementById('slideViewport').appendChild(clone);
+    totalSlides++;
+    updateSlide(newIndex);
+    buildSlideDrawer();
+    saveStateDebounced();
+    alert(`تم تكرار الشريحة كشريحة جديدة رقم ${newIndex}`);
+  }
+
+  // Screenshot Upload & Dropzone Helper for Dashboard Frames
+  function setupImageDropzones() {
+    const placeholders = document.querySelectorAll('.dashboard-canvas');
+    placeholders.forEach(canvas => {
+      // Add file input
+      const fileInput = document.createElement('input');
+      fileInput.type = 'file';
+      fileInput.accept = 'image/*';
+      fileInput.style.display = 'none';
+      canvas.appendChild(fileInput);
+
+      canvas.addEventListener('click', (e) => {
+        if (!isEditMode) return;
+        if (e.target.tagName !== 'BUTTON' && !e.target.closest('button')) {
+          fileInput.click();
+        }
+      });
+
+      fileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (ev) => {
+            canvas.innerHTML = `
+              <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative;">
+                <img src="${ev.target.result}" style="max-width:100%; max-height:100%; object-fit:contain; border:2px solid #000; box-shadow:4px 4px 0 #000;" alt="Dashboard Screenshot" />
+                <button class="tool-btn coral" onclick="resetCanvasPlaceholder(this)" style="position:absolute; top:10px; right:10px; font-size:10px;">✕ REMOVE IMAGE</button>
+              </div>
+            `;
+            saveStateDebounced();
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      // Drag and drop
+      canvas.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        canvas.classList.add('dropzone-active');
+      });
+      canvas.addEventListener('dragleave', () => canvas.classList.remove('dropzone-active'));
+      canvas.addEventListener('drop', (e) => {
+        e.preventDefault();
+        canvas.classList.remove('dropzone-active');
+        if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+          fileInput.files = e.dataTransfer.files;
+          fileInput.dispatchEvent(new Event('change'));
+        }
+      });
+    });
+  }
+
+  window.resetCanvasPlaceholder = function(btn) {
+    const canvas = btn.closest('.dashboard-canvas');
+    if (!canvas) return;
+    canvas.innerHTML = `
+      <div class="placeholder-target">
+        <div style="font-family:'JetBrains Mono'; font-weight:800; font-size:16px; margin-bottom:8px;">
+          [ POWERBI / DATABRICKS SQL DASHBOARD SCREENSHOT PLACEHOLDER ]
+        </div>
+        <p style="font-size:13px; color:#666; max-width:600px; line-height:1.5;">
+          Click or drag & drop a screenshot file to replace this frame.
+        </p>
+      </div>
+    `;
+    setupImageDropzones();
+    saveStateDebounced();
+  };
+
+  function openSlideDrawer() {
+    buildSlideDrawer();
+    document.getElementById('slide-drawer-modal').style.display = 'block';
+  }
+
+  function closeSlideDrawer() {
+    document.getElementById('slide-drawer-modal').style.display = 'none';
+  }
+
+  function buildSlideDrawer() {
+    const grid = document.getElementById('drawerGrid');
+    if (!grid) return;
+    grid.innerHTML = '';
+
+    const slides = document.querySelectorAll('.slide');
+    slides.forEach((slide, idx) => {
+      const slideNum = idx + 1;
+      const titleEl = slide.querySelector('.slide-title, .hero-title');
+      const title = titleEl ? titleEl.textContent.trim().replace(/\s+/g, ' ') : `Slide ${slideNum}`;
+      const tagEl = slide.querySelector('.editorial-tag');
+      const tag = tagEl ? tagEl.textContent.trim() : 'SLIDE';
+
+      const card = document.createElement('div');
+      card.className = 'drawer-card' + (slideNum === currentSlide ? ' active-card' : '');
+      card.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+          <span style="font-family:'JetBrains Mono'; font-size:11px; font-weight:800; background:#000; color:#FFE600; padding:2px 6px;">#${String(slideNum).padStart(2, '0')}</span>
+          <span style="font-family:'JetBrains Mono'; font-size:9px; font-weight:700; color:#555;">${tag}</span>
+        </div>
+        <div style="font-size:12px; font-weight:800; line-height:1.3; color:#111; max-height:48px; overflow:hidden;">
+          ${title}
+        </div>
+      `;
+      card.onclick = () => {
+        updateSlide(slideNum);
+        closeSlideDrawer();
+      };
+      grid.appendChild(card);
+    });
+  }
+
+  // Keyboard shortcut to close drawer with ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeSlideDrawer();
+    }
+  });
+
+  // Init on DOM ready
+  document.addEventListener('DOMContentLoaded', initTemplateEngine);
+
 </script>
+
+
+<!-- Slide Drawer Modal -->
+<div id="slide-drawer-modal" onclick="if(event.target === this) closeSlideDrawer()">
+  <div class="drawer-content">
+    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:3px solid #000; padding-bottom:12px;">
+      <div>
+        <h2 style="font-size:24px; font-weight:900;">TEMPLATE SLIDE CATALOG (17 SLIDES)</h2>
+        <p style="font-family:'JetBrains Mono'; font-size:12px; color:#555;">Click any slide to jump directly or inspect layout pattern.</p>
+      </div>
+      <button class="tool-btn coral" onclick="closeSlideDrawer()">✕ CLOSE [ESC]</button>
+    </div>
+    <div class="drawer-grid" id="drawerGrid">
+      <!-- Populated dynamically via JS -->
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
